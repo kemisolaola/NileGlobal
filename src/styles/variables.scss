@@ -1,0 +1,8 @@
+$body-font-family: "Gotham", sans-serif;
+$headings: (
+  'h1': (
+    'size': 36px,
+    'line-height': 33.8px
+  )
+);
+@import "vuetify/src/styles/styles.sass";
