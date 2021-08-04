@@ -22,9 +22,34 @@
                       ></v-text-field>
                 </v-col>
                 <v-col   cols="12"  md="6"   >
-                    <label>Date</label>
-                    <v-select outlined placeholder=""
-                      ></v-select>
+                    <v-menu
+                              ref="menu"
+                              v-model="menu"
+                              :close-on-content-click="false"
+                              transition="scale-transition"
+                              offset-y
+                              min-width="auto"
+                            >
+                              <template v-slot:activator="{ on, attrs }">
+                                  <label>Date</label>
+                                <v-text-field
+                                outlined
+                                background-color="#fafafa"
+                                  v-model="date"
+                                  readonly
+                                  v-bind="attrs"
+                                  v-on="on"
+                                ></v-text-field>
+                              </template>
+                              <v-date-picker
+                                                              v-model="date"
+                                :active-picker.sync="activePicker"
+                                color="#ff6433"
+                                :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
+                                min="1950-01-01"
+                                @change="save"
+                              ></v-date-picker>
+                            </v-menu>
                 </v-col>
                 <v-col   cols="12"  md="6"   >
                     <label>Original Country</label>
@@ -41,20 +66,18 @@
                     <v-text-field  solo flat background-color="#FAFAFA"  placeholder="Order Number"
                       ></v-text-field>
                          </v-col>
-                <v-col cols="12" >
-                    <label>Attach Pictures</label>
-                    <v-file-input  solo flat background-color="#FAFAFA" placeholder="Pictures aid swift product sourcing or branding" truncate-length="42"></v-file-input>
-                </v-col>
-                  <v-col cols="10">
+                     <v-row v-for="(row, index) in rows" :key="index">
+                  <v-col cols="10" >
                     <label>Product Description</label>
-                    <v-text-field  solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
+                    <v-text-field  v-model="row.title" solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
                 </v-col>
                 <v-col cols="2">
                     <label>Qty</label>
-                    <v-text-field  solo flat background-color="#FAFAFA" type="number" placeholder="Qty"  ></v-text-field>
+                    <v-text-field type="number" v-model="row.qty" solo flat background-color="#FAFAFA" placeholder="Qty"  ></v-text-field>
                 </v-col>
+                  </v-row>
                   <v-col cols="12">
-                <v-btn block plain text>Add more items +</v-btn>
+                <v-btn block plain outlined class="py-5" text @click="addRow">Add more items <v-icon>mdi-plus</v-icon></v-btn>
                 </v-col>
                 <v-col cols="12">
                   <p>Products, branded items or agricultural produce meant for export will go through NGS quality assurance control</p>
@@ -78,6 +101,18 @@ export default {
   components: {
     Navbar,
     Footer
+  },
+  data () {
+    return {
+      rows: [
+        { title: '', qty: '' }
+      ]
+    }
+  },
+  methods: {
+    addRow () {
+      this.rows.push({ title: '', qty: '' })
+    }
   }
 }
 </script>

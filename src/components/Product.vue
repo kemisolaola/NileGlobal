@@ -69,5 +69,25 @@ text-align: left;
   padding-left: 30px;
   padding-right: 21px;
 }
+.price{
+color: #ff6433;
+font-family: 'Gotham', sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: 350;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
+}
+.goods-quantity{
+font-family: 'Gotham', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
 
+}
 </style>

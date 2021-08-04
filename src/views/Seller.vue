@@ -55,7 +55,7 @@
                      <v-col class="reverse-shape" cols="12" md="6">
                         <v-img class="megan" contain src="@/assets/megan-woman.png"></v-img>
                     </v-col>
-                    <v-col cols="12" md="6">
+                    <v-col cols="12" md="6" style="padding-left: 128px">
                         <p class="how">HOW IT WORKS</p>
                         <p class="simple">Be Easily<br> Discovered</p>
                                  <p class="process">Get noticed by uploading your<br> products as buyers tend to use the<br> plaftform to source for multiple<br> products in large quantities.  </p>
@@ -71,7 +71,7 @@
                                          <v-img class="megan" width="540" contain src="@/assets/megan-shake.png"></v-img></v-col>
                           </v-row>
   </v-container>
-  <Faq/>
+  <Faqseller/>
        <Email/>
   <Footer/>
         </v-app>
@@ -79,13 +79,13 @@
 
 <script>
 import Email from '@/components/Email.vue'
-import Faq from '@/components/Faq.vue'
+import Faqseller from '@/components/Faqseller.vue'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'Seller',
   components: {
-    Faq,
+    Faqseller,
     Email,
     Navbar,
     Footer
@@ -97,11 +97,29 @@ export default {
 .shape{
   background-image: url('../assets/shape-dots.png'), url('../assets/shape-circle.png'), url('../assets/shape-dots.png');
   background-position: right top, right bottom, left bottom;
-  }
+  animation: anime-circle 10s linear infinite alternate;
+}
+@keyframes anime {
+  from {
+     background-position: left top, left bottom, right bottom;
+     }
+  to {
+     background-position: 20px -90px, 200px 200px, 20px 90px;
+     }
+}
   .reverse-shape{
   background-image: url('../assets/shape-dots.png'), url('../assets/shape-circle.png'), url('../assets/shape-dots.png');
   background-position: left top, left bottom, right bottom;
+    animation: anime-circle 10s linear infinite alternate;
   }
+  @keyframes anime-circle {
+  from {
+     background-position: left top, left bottom, right bottom;
+     }
+  to {
+     background-position: 20px -90px, 200px 200px, 20px 90px;
+     }
+}
 .headers{
     margin-top: 9%;
     text-align: center;
@@ -135,7 +153,7 @@ letter-spacing: 0.2em;
 text-align: center;
 }
 .strategy{
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 26px;
 font-style: normal;
 font-weight: 350;
@@ -156,7 +174,7 @@ color: #ff6433;
 text-align: center;
 }
 .brands {
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 350;
@@ -184,7 +202,7 @@ margin-left: 24%;
 margin-right: 16%;
 } */
 .how{
- font-family: Gotham;
+ font-family: 'Gotham', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 350;
@@ -194,7 +212,7 @@ text-align: left;
 
 }
 .simple{
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 43px;
 font-style: normal;
 font-weight: 350;
@@ -204,7 +222,7 @@ text-align: left;
 
 }
 .process {
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 16px;
 font-style: normal;
 font-weight: 325;
@@ -213,7 +231,7 @@ letter-spacing: 0em;
 
 }
 .faq{
-    font-family: Gotham;
+    font-family: 'Gotham', sans-serif;
 font-size: 39px;
 font-style: normal;
 font-weight: 350;
@@ -226,7 +244,7 @@ text-align: center;
     margin-top: 8.7%;
 }
 .covered{
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 350;
@@ -236,7 +254,7 @@ text-align: center;
 
 }
 .clear {
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
@@ -248,7 +266,7 @@ padding-top: 17px;
 
 }
 .about-faq {
-    font-family: Gotham;
+    font-family: 'Gotham', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 350;
@@ -261,7 +279,7 @@ padding-right: 5%;
 }
 
 .discover {
- font-family: Gotham;
+ font-family: 'Gotham', sans-serif;
 font-size: 39px;
 font-style: normal;
 font-weight: 350;
@@ -271,7 +289,7 @@ color: #5B5B5B;
 
 }
 .access {
-  font-family: Gotham;
+  font-family: 'Gotham', sans-serif;
 font-size: 17px;
 font-style: normal;
 font-weight: 350;

@@ -1,10 +1,12 @@
 <template>
-    <v-container class="login" >
+    <v-container>
+      <v-container justify="center">
           <v-row class="" align="center" justify="center">
-                     <v-col class="text-center logo" cols="12"> <router-link to="./"><v-img width="200" src="@/assets/nile-light.png"></v-img></router-link> </v-col>
-                  </v-row>
-                   <v-row class="pt-14" align="center" justify="center">
-                                         <v-col cols="12" class="title text-center"> <p>CREATE SELLER ACCOUNT</p></v-col>
+                     <v-col class=" logo " cols="12"><router-link to="./"> <v-img width="200" src="@/assets/nile-light.png"></v-img></router-link> </v-col>
+                                                                                        <v-col cols="12" class="create"> <p>CREATE SELLER ACCOUNT</p></v-col>
+  </v-row>
+      </v-container>
+                   <v-row class="brandsignup pt-14" align="center" justify="center">
               <v-col cols="12" md="6">
               <v-card width="455" elevation="0">
                  <p class="greet"> Hello,<br><br>
@@ -51,9 +53,16 @@ export default {
 </script>
 
 <style scoped>
+.brandsignup {
+  margin-left: 5%;
+    font-family: 'Gotham', sans-serif;
+}
 .logo {
-    margin-left: 35%;
-    text-align: center;
+    margin-left: 80%;
+    margin-top: 100px;
+}
+.create{
+  text-align: center;
 }
 .greet{font-family: 'Gotham', sans-serif;
 font-size: 18px;

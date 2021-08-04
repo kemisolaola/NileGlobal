@@ -34,28 +34,52 @@ the usual customs, clearing and forwarding debacle.</p>
                          </v-col>
                 <v-col cols="12" >
                     <label>Attach Pictures</label>
-                    <v-file-input id="actual-btn"  solo flat background-color="#FAFAFA" prepend-icon="" placeholder="Pictures aid swift product sourcing or branding" truncate-length="42"></v-file-input>
-                </v-col>
-                <v-col cols="12" >
-                  <uploader title="" multiple=true></uploader>
-                </v-col>
-                <v-col cols="12">
-                  <v-row>
-                  <v-col cols="3"><label class="labels" for="actual-btn" > <v-icon>mdi-plus</v-icon></label></v-col>
-                  <v-col cols="3"><label class="labels" for="actual-btn" > <v-icon>mdi-plus</v-icon></label></v-col>
-                  <v-col cols="3"><label class="labels" for="actual-btn" > <v-icon>mdi-plus</v-icon></label></v-col>
-                  <v-col cols="3"><label class="labels" for="actual-btn" > <v-icon>mdi-plus</v-icon></label></v-col>
-                  </v-row></v-col>
-                  <v-col cols="10">
+                  <v-row class="my-4" justify="center"><v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData})` }"  @click="chooseImage"
+                      >
+                        <span  v-if="!imageData"  class="placeholder"      >
+                          <v-icon>mdi-plus</v-icon>
+                        </span>
+                        <input class="file-input" ref="fileInput" type="file"  @input="onSelectFile">
+                                              </div>
+                        </v-col>
+                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData1})` }"  @click="chooseImage1"
+                      >
+                        <span  v-if="!imageData1"  class="placeholder"      >
+                          <v-icon>mdi-plus</v-icon>
+                        </span>
+                        <input   class="file-input" ref="fileInput1" type="file"  @input="onSelectFile1">
+                                              </div>
+                        </v-col>
+                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData2})` }"  @click="chooseImage2"
+                      >
+                        <span  v-if="!imageData2"  class="placeholder"      >
+                          <v-icon>mdi-plus</v-icon>
+                        </span>
+                        <input  class="file-input" ref="fileInput2" type="file"  @input="onSelectFile2">
+                                              </div>
+                        </v-col>
+                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData3})` }"  @click="chooseImage3"
+                      >
+                        <span  v-if="!imageData3"  class="placeholder"      >
+                          <v-icon>mdi-plus</v-icon>
+                        </span>
+                        <input  class="file-input" ref="fileInput3" type="file"  @input="onSelectFile3">
+                                              </div>
+                        </v-col>
+                        </v-row>
+                    </v-col>
+                                               <v-row v-for="(row, index) in rows" :key="index">
+                                                   <v-col cols="10" >
                     <label>Product Description</label>
-                    <v-text-field  solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
+                    <v-text-field  v-model="row.title" solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
                 </v-col>
                 <v-col cols="2">
                     <label>Qty</label>
-                    <v-text-field type="number"  solo flat background-color="#FAFAFA" placeholder="Qty"  ></v-text-field>
+                    <v-text-field type="number" v-model="row.qty" solo flat background-color="#FAFAFA" placeholder="Qty"  ></v-text-field>
                 </v-col>
+                  </v-row>
                   <v-col cols="12">
-                <v-btn block plain text>Add more items <v-icon>mdi-plus</v-icon></v-btn>
+                <v-btn block plain text @click="addRow">Add more items <v-icon>mdi-plus</v-icon></v-btn>
                 </v-col>
                     <v-col>
                 <v-btn color="#ff6433" block dark large> Submit</v-btn>
@@ -69,25 +93,125 @@ the usual customs, clearing and forwarding debacle.</p>
 </template>
 
 <script>
-import Uploader from 'vux-uploader-component'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'Imports',
   components: {
-    Uploader,
     Navbar,
     Footer
   },
   data  () {
     return {
-      selectItems: ['Brand only', ' Source only', 'Brand and Source']
+      rows: [
+        { title: '', qty: '' }
+      ],
+      selectItems: ['Brand only', ' Source only', 'Brand and Source'],
+      image: [],
+      images: [],
+      url: null,
+      fileList: [],
+      imageData: null,
+      imageData1: null,
+      imageData2: null,
+      imageData3: null,
+      product: ''
+    }
+  },
+  methods: {
+    addRow () {
+      this.rows.push({ title: '', qty: '' })
+    },
+    chooseImage () {
+      this.$refs.fileInput.click()
+    },
+    chooseImage1 () {
+      this.$refs.fileInput1.click()
+    },
+    chooseImage2 () {
+      this.$refs.fileInput2.click()
+    },
+    chooseImage3 () {
+      this.$refs.fileInput3.click()
+    },
+    onSelectFile () {
+      const input = this.$refs.fileInput
+      const files = input.files
+      if (files && files[0]) {
+        const reader = new FileReader()
+        reader.onload = e => {
+          this.imageData = e.target.result
+        }
+        reader.readAsDataURL(files[0])
+        this.$emit('input', files[0])
+      }
+    },
+    onSelectFile1 () {
+      const input = this.$refs.fileInput1
+      const files = input.files
+      if (files && files[0]) {
+        const reader = new FileReader()
+        reader.onload = e => {
+          this.imageData1 = e.target.result
+        }
+        reader.readAsDataURL(files[0])
+        this.$emit('input', files[0])
+      }
+    },
+    onSelectFile2 () {
+      const input = this.$refs.fileInput2
+      const files = input.files
+      if (files && files[0]) {
+        const reader = new FileReader()
+        reader.onload = e => {
+          this.imageData2 = e.target.result
+        }
+        reader.readAsDataURL(files[0])
+        this.$emit('input', files[0])
+      }
+    },
+    onSelectFile3 () {
+      const input = this.$refs.fileInput3
+      const files = input.files
+      if (files && files[0]) {
+        const reader = new FileReader()
+        reader.onload = e => {
+          this.imageData3 = e.target.result
+        }
+        reader.readAsDataURL(files[0])
+        this.$emit('input', files[0])
+      }
     }
   }
 }
 </script>
 
 <style scoped>
+.base-image-input {
+  display: block;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+}
+.placeholder {
+  background: #F0F0F0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+.placeholder:hover {
+  background: #E0E0E0;
+}
+.file-input {
+  display: none;
+}
 .import-header{
   font-family: "Gotham", sans-serif;
 font-size: 39px;

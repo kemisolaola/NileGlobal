@@ -19,4 +19,10 @@ export default {
   font-family: 'Gotham';
   src: url('/fonts/GothamRounded-Medium.ttf'), local('Gotham') format('truetype');
 }
+#app{
+  font-family: 'Gotham', sans-serif;
+}
+v-btn {
+  font-family: 'Gotham', sans-serif;
+}
 </style>

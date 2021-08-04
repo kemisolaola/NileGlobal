@@ -1,22 +1,22 @@
 <template>
   <v-footer class="mt-10 footer-container white" >
-      <div class="pl-10"><router-link to="./"><v-img max-width="250" src="@/assets/nilelogo.png"></v-img></router-link></div>
       <v-row align="center" class="mt-4" justify="center" >
         <v-col cols="12" md="5">
-          <p>Our mission is to create a sustainable bridge between consumer goods and employment opportunities across
+               <div class=""><router-link to="./"><v-img max-width="250" src="@/assets/nilelogo.png"></v-img></router-link></div>
+ <p class="pt-5">Our mission is to create a sustainable bridge between consumer goods and employment opportunities across
              all sectors, thereby making Africa a global marketplace.</p>
-        <v-row class="mt-5">
+        <v-row class="mt-3">
       <v-col cols="2" >
-        <v-img width="25" src="@/assets/facebook.png"></v-img>
+        <a href="https://web.facebook.com/NileGlobalNG"><v-img width="20" src="@/assets/facebook.png"></v-img></a>
       </v-col>
        <v-col cols="2">
-        <v-img width="25" src="@/assets/twitter.png"></v-img>
+        <v-img width="20" src="@/assets/twitter.png"></v-img>
       </v-col>
        <v-col cols="2">
-        <v-img width="25"  src="@/assets/instagram.png"></v-img>
+        <a href="https://www.instagram.com/nileglobalng/"><v-img width="20"  src="@/assets/instagram.png"></v-img></a>
       </v-col>
        <v-col cols="2">
-        <v-img width="25" src="@/assets/linkedin.png"></v-img>
+        <v-img width="20" src="@/assets/linkedin.png"></v-img>
       </v-col>
     </v-row>
         </v-col>

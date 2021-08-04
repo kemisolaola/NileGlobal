@@ -11,6 +11,8 @@ import Buyer from '../views/Buyer.vue'
 import BrandSignup from '../views/BrandSignup.vue'
 import BuyerSignup from '../views/BuyerSignup.vue'
 import Contacts from '../views/Contacts.vue'
+import Company from '../views/Company.vue'
+import Presignup from '../views/Presignup.vue'
 
 Vue.use(VueRouter)
 
@@ -59,6 +61,16 @@ const routes = [
     path: '/buyers',
     name: 'Buyer',
     component: Buyer
+  },
+  {
+    path: '/company',
+    name: 'Company',
+    component: Company
+  },
+  {
+    path: '/presignup',
+    name: 'Presignup',
+    component: Presignup
   },
   {
     path: '/login',

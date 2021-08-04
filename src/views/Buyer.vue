@@ -19,10 +19,9 @@
    <section id="conference-timeline">
     <div class="conference-center-line"></div>
     <div class="conference-timeline-content">
-      <!-- Article -->
       <div class="timeline-article">
         <div class="content-left-container">
-          <div class="content-left"  style="border: 0;">
+          <div class="content-left"  style="border: 0; padding-top: 12px;">
         <p class="task">SIGNUP</p>
         <v-img src="@/assets/megan-men.png"></v-img>          </div>
         </div>
@@ -34,8 +33,6 @@
         </v-card>          </div>
         </div>
               </div>
-      <!-- // Article -->
-            <!-- Article -->
       <div class="timeline-article">
         <div class="content-left-container">
           <div class="content-left" style="border: 0;  padding-top: 150px">
@@ -43,7 +40,7 @@
          <p class="process">Sign-up today and get access<br> to our ever-growing database of<br> established and upcoming brands.</p>
               </div>
         </div>
-        <div class="content-right-container"  style="border: 0; padding-top: 150px">
+        <div class="content-right-container"  style="border: 0;">
         <p class="tasks">SEARCH</p>
         <v-img width="422" src="@/assets/megan-bino.png" ></v-img>
            </div>
@@ -52,7 +49,7 @@
             <!-- Article -->
       <div class="timeline-article">
         <div class="content-left-container">
-          <div class="content-left"  style="border: 0;">
+          <div class="content-left"  style="border: 0;padding-top:10px;">
  <v-card elevation="0" width="422">
       <p class="task">COMPLETE ORDERS</p>
         <v-img class=""  src="@/assets/megan-shake.png"></v-img>
@@ -68,91 +65,77 @@
               </div>
     </div>
   </section>
-  <Faq/>
+  <Faqbuyer/>
    <v-container fluid>
     <v-row align="center" class="pt-14" justify="center">
       <v-col class="text-center" cols="6">
         <p class="text-h6 text-center font-weight-bold">Discover some available products</p>
       </v-col>
     </v-row>
-  <v-container style="margin-left: 14%;">
-    <v-container style="margin-right:200px">
-      <swiper class="swiper" :options="swiperOption">
-    <swiper-slide v-for="i in 3" :key="i">
-      <v-card elevation="0" height="479">
-        <v-img width="380" contain src="@/assets/chair.png" ></v-img>
-        <v-card elevation="0" class="pt-14">
-         <v-row>
+    <v-container style="margin-left: 5%;">
+       <splide :options="prodoptions">
+    <splide-slide style="width: 400px" class="" v-for="i in 4" :key="i">
+              <v-card  elevation="1" height="" style="margin-bottom:50px" width="347">
+        <div class="product pt-3 mb-5">
+                  <v-img contain src="@/assets/chair.png" ></v-img>
+         <v-row class="px-7 pt-3 mb-3">
            <v-col >
              <p class="classic">Classic Furniture</p>
            </v-col>
-           <v-col class="ml-6"><p class="price">N50000</p></v-col>
-         </v-row>
-         <v-row>
-            <v-col> <p class="goods-info">Packed with all the essentials to welcome employees or get clients excited.</p></v-col>
-            <v-col></v-col>
-         </v-row>
-         <v-row>
-            <v-col> <v-btn small dark color="#FF6433">ORDER NOW</v-btn></v-col>
-            <v-col class="ml-6 goods-quantity"><p>Min. 25 pieces</p></v-col>
-         </v-row>
-         </v-card>
-       </v-card>
-    </swiper-slide>
-    <swiper-slide style="opacity:0;"></swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+           <v-col class="ml-6"><p class="price text-right">N50000</p></v-col>
+           <v-col cols="7"> <p class="goods-info">Packed with all the essentials to welcome employees or get clients excited.</p></v-col>
+             <v-col cols="6"> <v-btn dark color="#FF6433">ORDER NOW</v-btn></v-col>
+            <v-col class=" goods-quantity  text-right"><p>Min. 25 pieces</p></v-col>
+          </v-row>  </div>
+              </v-card> </splide-slide>
+  </splide>
     </v-container>
     </v-container>
-    </v-container>
-   <Email/>
+       <Email/>
   <Footer/>
    </v-app>
 </template>
 
 <script>
 import Email from '@/components/Email.vue'
-import Faq from '@/components/Faq.vue'
+import Faqbuyer from '@/components/Faqbuyer.vue'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
+import 'gotham-fonts/fonts/GothamRounded-Medium.ttf'
 export default {
-  name: 'Buyer  ',
+  name: 'Buyer',
   components: {
-    Faq,
+    Faqbuyer,
     Email,
-    Swiper,
-    SwiperSlide,
     Navbar,
+    Splide,
+    SplideSlide,
     Footer
   },
   data () {
     return {
-      swiperOption: {
+      prodoptions: {
         freeMode: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
+        rewind: true,
+        perPage: 3,
+        arrows: false,
+        gap: '0.5rem',
+        pagination: 'slider',
         breakpoints: {
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 40
+            perPage: 3
           },
           768: {
-            slidesPerView: 2,
-            spaceBetween: 30
+            perPage: 2
           },
           640: {
-            slidesPerView: 2,
+            perPage: 1,
             spaceBetween: 20
           },
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10
+          300: {
+            perPage: 1
           }
         }
       }
@@ -521,6 +504,17 @@ letter-spacing: 0.05em;
 text-align: right;
 
 }
+
+.testimonial-text{
+  font-family: 'Gotham', sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 20.8px;
+letter-spacing: 0em;
+text-align: left;
+
+}
 .goods-info {
   font-family: Gotham;
 font-size: 13px;
@@ -557,7 +551,7 @@ text-align: center;
 }
 .classic {
 color: #ff6433;
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 15px;
 font-style: normal;
 font-weight: 350;
@@ -588,9 +582,38 @@ padding-left: 2%;
 padding-top: 1.8%;
 padding-right: 5%;
 }
+.price {
+color: #ff6433;
+font-family: 'Gotham', sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: 350;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
 
-:root {
-    --swiper-theme-color: #ff6433;
+}
+.goods-info {
+  font-family: 'Gotham', sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 325;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+.goods-quantity{
+font-family: 'Gotham', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
 }
 .task {
 font-family: 'Gotham,' sans-serif;
