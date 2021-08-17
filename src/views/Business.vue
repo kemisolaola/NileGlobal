@@ -3,10 +3,10 @@
       <Navbar/>
     <v-img max-height="336" src="@/assets/business.png"> </v-img>
     <v-container class="business-page">
-        <v-row align="center" class="pt-14" justify="center">
-            <v-col class="text-center" cols="12">
+        <v-row align="center" class="pt-14 mx-auto" justify="center">
+            <v-col class="text-center" cols="12" md="8">
                 <p class="business-header">Business Consultation</p>
-                <p class="business-text">Business consultation could either be virtual or physical in nature. All necessary information required, such as<br> time, date, cost & venue will be communicated electronically ahead of the scheduled date.<br> Sudden changes by either parties should be communicated prior to the scheduled appointment date.</p>
+                <p class="business-text">Business consultation could either be virtual or physical in nature. All necessary information required, such as time, date, cost & venue will be communicated electronically ahead of the scheduled date. Sudden changes by either parties should be communicated prior to the scheduled appointment date.</p>
             </v-col>
         </v-row>
          <v-container width="690" class="business-form">
@@ -16,17 +16,17 @@
                     <label>Full Name</label>
                     <v-text-field solo  background-color= '#FAFAFA' flat fixed-label placeholder="Full Name" ></v-text-field>
                 </v-col>
-                <v-col cols="12"  md="6"  >
+                <v-col cols="12"  sm="6"  >
                     <label>Phone Number</label>
                     <v-text-field solo background-color= '#FAFAFA' flat single-line placeholder="Phone Number"
                      ></v-text-field>
                 </v-col>
-                <v-col cols="12" md="6"   >
+                <v-col cols="12" sm="6"   >
                     <label>Email</label>
                     <v-text-field solo background-color= '#FAFAFA' flat placeholder="Email"
                      ></v-text-field>
                 </v-col>
-                <v-col cols="12"  md="6"   >
+                <v-col cols="12"  sm="6"   >
                     <label>Industry</label>
                     <v-select :items="industry"  outlined placeholder="industry"
                      ></v-select>

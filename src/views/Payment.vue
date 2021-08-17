@@ -1,22 +1,22 @@
 <template>
   <v-app>
     <Navbar/>
-    <v-img max-height="336" src="@/assets/payment.png">
+    <v-container fluid class="foreign-exchange">
     <v-row  class="payment">
             <v-col class="" cols="12">
                 <p class="payment-title white--text">Foreign Exchange</p>
                 <p class="payment-title-text white--text">It’s another auxillary service, in order to foster a strong<br> working business relationship amongst all parties.</p>
             </v-col>
-        </v-row></v-img>
+        </v-row></v-container>
     <v-container  class="payment-form">
          <v-container width="690" class="">
              <v-form>
             <v-row >
-                <v-col cols="12"  md="6" >
+                <v-col cols="12"  sm="6" >
                     <label>Currency Type</label>
                     <v-select outlined fixed-label placeholder="Currency Type" ></v-select>
                 </v-col>
-                <v-col cols="12" md="6">
+                <v-col cols="12" sm="6">
                               <v-menu
                               ref="menu"
                               v-model="menu"
@@ -46,17 +46,17 @@
                               ></v-date-picker>
                             </v-menu>
                 </v-col>
-                <v-col cols="12" md="6"  >
+                <v-col cols="12" sm="6"  >
                     <label>Country</label>
                     <v-select outlined single-line placeholder="Country"
                      ></v-select>
                 </v-col>
-                <v-col  cols="12" md="6" >
+                <v-col  cols="12" sm="6" >
                     <label>City</label>
                     <v-text-field outlined placeholder="City"
                      ></v-text-field>
                 </v-col>
-                <v-col cols="12" md="6" >
+                <v-col cols="12" sm="6" >
                     <label>Beneficiary</label>
                     <v-text-field solo background-color="#FAFAFA" flat placeholder="As stated on the bank account"
                      ></v-text-field>
@@ -82,11 +82,11 @@
                     <label>Sort Code</label>
                     <v-text-field solo flat background-color="#FAFAFA" placeholder="Sort Code" ></v-text-field>
                 </v-col>
-                <v-col cols="12" md="6" >
+                <v-col cols="12" sm="6" >
                     <label>Country</label>
                     <v-select outlined placeholder=""></v-select>
                 </v-col>
-                <v-col cols="12" md="6" >
+                <v-col cols="12" sm="6" >
                     <label>City</label>
                     <v-select outlined placeholder=""></v-select>
                 </v-col>
@@ -100,11 +100,11 @@
                     <v-text-field solo flat background-color="#FAFAFA" placeholder="Sender Full Name"
                      ></v-text-field>
                 </v-col>
-                 <v-col cols="12" md="6">
+                 <v-col cols="12" sm="6">
                     <label>Phone Number</label>
                     <v-text-field solo flat background-color="#FAFAFA" placeholder="Phone Number" ></v-text-field>
                 </v-col>
-                  <v-col cols="12" md="6">
+                  <v-col cols="12" sm="6">
                     <label>Email</label>
                     <v-text-field solo flat background-color="#FAFAFA" placeholder="Email" ></v-text-field>
                 </v-col>
@@ -133,6 +133,24 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 992px) {
+.foreign-exchange{
+  background-image: url('../assets/payment.png');
+  background-size: cover;
+  background-repeat: no-repeat  ;
+  background-position: center;
+  height: 320px;
+}
+}
+@media only screen  and (max-width: 991px) {
+.foreign-exchange{
+  background-image: url('../assets/payment.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 270px;
+}
+}
 v-text-field{
     background-color: red;
 }
@@ -149,6 +167,18 @@ letter-spacing: 0em;
 text-align: center;
 
 }
+@media screen and (max-width: 960px) {
+  .payment-title-text{
+  font-family: 'Gotham', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 350;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+  }
+}
+@media screen and (min-width: 961px) {
 .payment-title-text{
   font-family: 'Gotham', sans-serif;
 font-size: 18.2px;
@@ -157,10 +187,11 @@ font-weight: 350;
 line-height: 26px;
 letter-spacing: 0em;
 text-align: center;
-
+}
 }
 .payment-form {
   padding-left: 11%;
   padding-right: 12%;
+  padding-top: 50px;
 }
 </style>

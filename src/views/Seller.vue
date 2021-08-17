@@ -3,37 +3,37 @@
     <Navbar/>
     <v-img max-height="550" src="@/assets/seller.png">
     <v-row class="headers" align="center"  justify="center">
-            <v-col class="white--text" cols="12">
+            <v-col class="white--text text-center" cols="12">
                 <p class="seller-header">Evolving brands to <br>global frontiers</p>
                 <p class=" header-text">Improve sales and unlock opportunities<br> for your brand’s growth</p>
-                   <v-btn color="#ff6433" dark> Sign up now</v-btn>
+                   <v-btn class="mb-3" color="#ff6433" to="./brands" dark> Sign up now</v-btn>
                     <br>
-                    <v-btn class="fab" fab><v-img height='15' width="12" contain src="@/assets/Polygon 6.png"></v-img></v-btn>
+                    <!-- <v-btn class="fab" fab><v-img height='15' width="12" contain src="@/assets/Polygon 6.png"></v-img></v-btn> -->
             </v-col>
         </v-row></v-img>
     <v-container fluid class="mt-5">
           <v-row align="center" class="pt-14" justify="center">
-            <v-col class="text-center " cols="6">
+            <v-col class="text-center " cols="10" sm="8" md="6">
                 <p class="trusted">TRUSTED BY HUNDREDS OF LOCAL BRANDS</p>
-                <p class=" strategy">Our strategy is to see Local Brands do Business with<br> International Retailers is the companys focal point.</p>
+                <p class=" strategy">Our strategy is to see Local Brands do Business with International Retailers is the companys focal point.</p>
                             </v-col>
         </v-row>
   </v-container>
    <v-container fluid class="mt-5">
           <v-row class="pt-14" justify="center">
-            <v-col cols="6" md="2">
+            <v-col cols="12" sm="6" md="2">
                 <p class="num" >1.206</p>
                 <p class="brands" >ONBOARDED<br> BRANDS</p>
             </v-col>
-              <v-col  cols="6" md="2">
+              <v-col  cols="12" sm="6" md="2">
                 <p class="num" >3250</p>
                 <p class="brands" >COMPLETED<br> TRANSACTIONS</p>
             </v-col>
-              <v-col  cols="6" md="2">
+              <v-col  cols="12" sm="6" md="2">
                 <p class="num">545334</p>
                 <p class="brands" >PRODUCTS<br> DELIVERED</p>
             </v-col>
-              <v-col cols="6" md="2">
+              <v-col cols="12" sm="6" md="2">
                 <p class="num" >100%</p>
                 <p class="brands">SATISFACTION<br>RATE</p>
             </v-col>
@@ -41,33 +41,35 @@
   </v-container>
   <v-container class="works">
                 <v-row align="center" class="pt-14">
-                    <v-col class="dots" cols="12" md="4">
+                    <v-col class="dots" cols="12" sm="6" md="4">
                         <p class="how">HOW IT WORKS</p>
                         <p class="simple">Simple<br> Onboarding</p>
-                                 <p class="process">With Niles Global, the brand<br> registration process is streamlined<br> in 4
-                                     easy steps without any<br> need for official documentation. </p>
+                                 <p class="process">With Niles Global, the brand registration process is streamlined in 4 easy steps without any need for official documentation. </p>
                                                 </v-col>
-                    <v-col class="shape" cols="12" md="6" >
+                    <v-col class="shape" cols="12" sm="6" md="6" >
                         <v-img class="megan" width="540" contain src="@/assets/megan-man.png"></v-img>
                     </v-col>
                 </v-row>
                  <v-row align="center" class="pt-14">
-                     <v-col class="reverse-shape" cols="12" md="6">
+                     <v-col class="reverse-shape megan-woman" cols="12" sm="6" md="6">
                         <v-img class="megan" contain src="@/assets/megan-woman.png"></v-img>
                     </v-col>
-                    <v-col cols="12" md="6" style="padding-left: 128px">
+                    <v-col cols="12" sm="6" md="6" class="discovered">
                         <p class="how">HOW IT WORKS</p>
                         <p class="simple">Be Easily<br> Discovered</p>
                                  <p class="process">Get noticed by uploading your<br> products as buyers tend to use the<br> plaftform to source for multiple<br> products in large quantities.  </p>
                                                 </v-col>
+                                                 <v-col class="reverse-shape megan-lady" cols="12" sm="6" md="6">
+                        <v-img class="megan" contain src="@/assets/megan-woman.png"></v-img>
+                    </v-col>
                                     </v-row>
                  <v-row align="center" class="pt-14">
-                    <v-col class="dots" cols="12" md="4">
+                    <v-col class="dots" cols="12" sm="6" md="4">
                         <p class="how">HOW IT WORKS</p>
                         <p class="simple">Connect & <br>Do Business</p>
-                                 <p class="process">Brands get notified about orders<br> and logistics of the products can be<br> handled by the company with<br> numerous warehouses with agents<br> around the country. </p>
+                                 <p class="process">Brands get notified about orders and logistics of the products can be handled by the company with numerous warehouses with agentsaround the country. </p>
                                                 </v-col>
-                    <v-col class="shape" cols="12" md="6" >
+                    <v-col class="shape" cols="12" sm="6" md="6" >
                                          <v-img class="megan" width="540" contain src="@/assets/megan-shake.png"></v-img></v-col>
                           </v-row>
   </v-container>
@@ -94,6 +96,102 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 767px) {
+  .headers{
+    margin-top: 40px;
+}
+.seller-header {
+font-family: 'Gotham', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 350;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+}
+.header-text {
+font-family: "Gotham", sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 15px;
+text-align: center;
+
+}
+.trusted {
+font-family: 'Gotham', sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 15px;
+letter-spacing: 0.2em;
+text-align: center;
+}
+.strategy{
+font-family: 'Gotham', sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 350;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+.megan-woman{
+  display: none;
+}
+}
+@media only screen and (min-width: 768px) {
+  .megan-lady {
+    display: none;
+  }
+  .discovered {
+  padding-left: 20px;
+}
+  .strategy{
+font-family: 'Gotham', sans-serif;
+font-size: 26px;
+font-style: normal;
+font-weight: 350;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+  .trusted {
+font-family: 'Gotham', sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 65px;
+letter-spacing: 0.2em;
+text-align: center;
+}
+  .headers{
+    margin-top: 40px;
+}
+.seller-header {
+font-family: 'Gotham', sans-serif;
+font-size: 45px;
+font-style: normal;
+font-weight: 350;
+line-height: 50px;
+letter-spacing: 0em;
+text-align: center;
+}
+.header-text {
+font-family: "Gotham", sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 350;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+}
 .shape{
   background-image: url('../assets/shape-dots.png'), url('../assets/shape-circle.png'), url('../assets/shape-dots.png');
   background-position: right top, right bottom, left bottom;
@@ -120,49 +218,11 @@ export default {
      background-position: 20px -90px, 200px 200px, 20px 90px;
      }
 }
-.headers{
+/* .headers{
     margin-top: 9%;
     text-align: center;
-}
-.seller-header {
-font-family: 'Gotham', sans-serif;
-font-size: 4.8vw;
-font-style: normal;
-font-weight: 350;
-line-height: 70px;
-letter-spacing: 0em;
-text-align: center;
-}
-.header-text {
-font-family: "Gotham", sans-serif;
-font-size: 1.6vw;
-font-style: normal;
-font-weight: 350;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: center;
+} */
 
-}
-.trusted {
-font-family: 'Gotham', sans-serif;
-font-size: 13px;
-font-style: normal;
-font-weight: 350;
-line-height: 65px;
-letter-spacing: 0.2em;
-text-align: center;
-}
-.strategy{
-font-family: 'Gotham', sans-serif;
-font-size: 26px;
-font-style: normal;
-font-weight: 350;
-line-height: 30px;
-letter-spacing: 0em;
-text-align: center;
-color: #5B5B5B;
-
-}
 .num {
 font-family: "Gotham", sans-serif;
 font-size: 39px;
@@ -206,17 +266,17 @@ margin-right: 16%;
 font-size: 13px;
 font-style: normal;
 font-weight: 350;
-line-height: 72px;
+line-height: 20px;
 letter-spacing: 0em;
 text-align: left;
 
 }
 .simple{
 font-family: 'Gotham', sans-serif;
-font-size: 43px;
+font-size: 40px;
 font-style: normal;
 font-weight: 350;
-line-height: 50px;
+line-height: 45px;
 letter-spacing: -0.02em;
 text-align: left;
 

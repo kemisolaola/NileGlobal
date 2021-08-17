@@ -17,7 +17,7 @@ export default {
 <style>
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamRounded-Medium.ttf'), local('Gotham') format('truetype');
+  src: url("~@/assets/gotham-fonts/GothamPro-Medium.woff"), local('Gotham') format('truetype');
 }
 #app{
   font-family: 'Gotham', sans-serif;
@@ -25,4 +25,14 @@ export default {
 v-btn {
   font-family: 'Gotham', sans-serif;
 }
+.custom-placeholer-color input::placeholder {
+  color: red!important;
+  opacity: 1;
+}
+
+.custom-label-color .v-label {
+  color: red;
+  opacity: 1;
+}
+
 </style>

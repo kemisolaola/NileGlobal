@@ -1,50 +1,51 @@
 <template>
   <v-app >
     <Navbar/>
-      <v-container class="head" fluid>
+      <v-container fluid class="headss" >
         <v-row  class=" contents">
           <v-col cols="12"  class="header-content" >
-            <p class="header-title">Revolutionizing how brands go global</p>
-            <p class="niles-global white--text">Niles Global is the leading Bilateral trade platform for businesses, connecting local brands & entreperneurs with international retailers.</p>
-            <v-container class="text-center">  <v-btn class="ml-16" color="#FF6433" to="/buyers"  dark>For buyers</v-btn>
-            <v-btn class="ml-16" dark outlined color="white" to="/seller">For brands</v-btn>
+            <div class="header-title"><p >Revolutionizing how brands go global</p></div>
+                          <p class="niles-global mx-auto white--text">Niles Global is the leading Bilateral trade platform for businesses, connecting local brands & entreperneurs with international retailers.</p>
+            <v-container class="text-center pb-16">
+            <v-btn class="" color="#FF6433" to="/buyers"  dark>For buyers</v-btn>
+            <v-btn class="brands-btn" dark outlined color="white" to="/seller">For brands</v-btn>
             </v-container> </v-col>
         </v-row>
-        <v-container class="brand">
-          <v-row class="brands-row" justify="center">
-            <v-col  cols="12" sm="6" md="4">
-              <v-card elevation='5' class="about" width="312"  min-height="400">
+      </v-container>
+         <v-container class="brand mx-auto ">
+          <v-row class="brands-row">
+            <v-col  cols="12" sm="6" md="4" lg="4">
+              <v-card elevation='5' class="about"   min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="@/assets/magnifying-glass.png"></v-img>
                 <p class="card-header">We Source</p>
                 <p class="card-text" >We serve as a third party between individuals and companies in goods import and export. We also have boots on the ground to make product sourcing and market sourcing a breeze</p>
               </v-card>
             </v-col>
-            <v-col  cols='12' sm="6" md="4">
-              <v-card elevation="5" class="about" width="312"  min-height="400">
+            <v-col  cols='12' sm="6" md="4" lg="4">
+              <v-card elevation="5" class="about"   min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="@/assets/brand.png"></v-img>
                 <p class="card-header">We Brand</p>
                 <p class="card-text">Advertise your business or brand with excellent product branding solutions. Think fittings, souvenirs, business apparatus, and more. We brand them all.</p>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
-              <v-card elevation="5" class="about" width="312"  min-height="400">
+            <v-col cols="12" sm="6" md="4" lg="4">
+              <v-card elevation="5" class="about"  min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="@/assets/truck.png"></v-img>
                 <p  class="card-header">We Ship</p>
                 <p class="card-text">We provide secure package delivery services between individuals, companies, and sellers. From China to your doorstep, without the hassle of dealing with customs,freight and forwarding.</p>
               </v-card>
             </v-col>
          </v-row>
-        </v-container>
       </v-container>
        <v-container fluid class="start">
-        <v-row align="center" class="pt-14" justify="center">
+         <v-row align="center" class="pt-14" justify="center">
           <v-col class="text-center" cols="12">
             <h3> START YOUR GLOBAL JOURNEY TODAY</h3>
             <h1 class="pt-5">What makes <span color="#FF6433--text"> Nile Global</span> different?</h1>
           </v-col>
         </v-row>
         <v-container class="benefit">
-          <v-row align="center" class="mt-15 ">
+          <v-row align="center" class="beneifits-row mt-15 ">
             <v-col cols="12" sm="6" md="4">
               <v-card  elevation="0" max-height="430">
                 <div class="ml-5"><v-img  max-width="36" src="@/assets/shopping-basket.png"></v-img></div>
@@ -81,37 +82,37 @@
     </v-row>
   </v-container>
   </v-container>
-  <v-container fluid class="services">
-    <v-row align="center"  justify="center">
+   <v-container fluid class="services">
+    <v-row align="center">
       <v-col cols="12">
         <h1 class="">Our Services</h1>
       </v-col>
     </v-row>
-    <v-container>
-    <v-row align="center"  justify="center"  class="mt-12  pl-11 ">
+    <v-container fluid>
+    <v-row align="center" class="services-row mt-12  "  justify="center"  >
       <v-col cols="12" sm="6" md="3">
-        <v-card elevation="5" to="./imports" class="services-card" width="268" height="323">
+        <v-card elevation="5" to="./imports" class="services-card"  height="350">
           <div class=""><v-img contain height="42" width="67" class="mx-auto" src="@/assets/trucker.png"></v-img></div>
           <p class="service-title mt-7">Import</p>
           <p class="services-text  mt-4">Tired of expensive and poorly branded items. You can also import quality branded items, machineries & sourvenirs for your events, business or occassions.</p>
         </v-card>
         </v-col>
       <v-col cols="12" sm="6" md="3">
-        <v-card elevation="5" to="./exports"  class="services-card" width="267" height="323">
+        <v-card elevation="5" to="./exports"  class="services-card"  height="350">
           <div ><v-img contain height="44" width="66" class="mx-auto" src="@/assets/globe.png"></v-img></div>
           <p class="service-title mt-7">Export</p>
           <p class="services-text mt-4">One of our business strategies is exporting the much needed raw materials, agricultural produce and more much in large quantities to China.</p>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="3" >
-        <v-card elevation="5"  class="services-card" to="./payment" width="267" height="323">
+        <v-card elevation="5"  class="services-card" to="./payment"  height="350">
           <div ><v-img contain height="44"  width="66" class="mx-auto" src="@/assets/exchange.png"></v-img></div>
           <p class="service-title mt-7">Foreign Exchange</p>
           <p class="services-text mt-4">Experience difficulties paying your foreign associates in foreign currencies. We can pay them on your behalf & you refund us the naira equivalent.</p>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="3" >
-        <v-card elevation="5"  class="services-card" to="business" width="267" height="323">
+        <v-card elevation="5"  class="services-card" to="/consultation"  height="350">
           <div ><v-img contain height="44"  width="66" class="mx-auto" src="@/assets/shake.png"></v-img></div>
           <p class="service-title mt-7">Consultation</p>
           <p class="services-text  mt-4">Are you worried, dismayed or confused because your business is facing challenges? Why not consult our team
@@ -120,72 +121,68 @@
       </v-row>
     </v-container>
   </v-container>
-  <v-container fluid class="how-work">
+   <v-container fluid class="how-work">
     <v-row align="center"  justify="center">
       <v-col cols="12">
         <h1 class="">How It Works</h1>
       </v-col>
     </v-row>
-    <v-row align="center"  justify="center"  class="mt-15  pl-11 ">
-      <v-col class="text-center"  cols="10" md="3">
-        <v-card class="how-card" height="470" width="270" elevation="0">
+   </v-container>
+        <v-container class="benefit">
+           <v-row align="center" class="mt-15 ">
+            <v-col class="how-it-works" cols="12" sm="6" md="4">
+              <v-card class="how-card text-center" height="470" width="270" elevation="0">
           <v-img  contain max-width="195" height="195" class="mx-auto pt-5" src="@/assets/consult.png"></v-img>
           <p class="how-title">Image Upload <br> and Consultation</p>
           <p class=" mt-4 how-text">Upload an image of the product you need. You can also browse through our categories for any industry you serve. Please endeavor to send clear images and specifications.</p>
-          <v-btn color="#FF6433"  class="mt-6" dark>Explore now</v-btn>
+          <v-btn color="#FF6433"  class="mt-5" dark>Explore now</v-btn>
         </v-card>
-      </v-col>
-      <v-col class="text-center" cols="10" md="3">
-        <v-card class="how-card" height="470" width="270" elevation="0">
-         <v-img contain max-width="195" height="195" class="mx-auto" src="@/assets/branding.png"></v-img>
+            </v-col>
+            <v-col cols="12" sm="6" md="4">
+             <v-card class="how-card text-center" height="470" width="270" elevation="0">
+          <v-img contain max-width="195" height="195" class="mx-auto" src="@/assets/branding.png"></v-img>
          <p class="how-title">Product Sourcing <br>and Branding</p>
-         <p class="text-center how-text ">Our agents go into the market to find your products. All products of your specifications and any other variations are sent to you for verification.<br> We also brand any products youneed to advertise your business.</p>
+         <p class="text-center how-text ">Our agents go into the market to find your products. All products of your specifications and any other variations are sent to you for verification. We also brand any products youneed to advertise your business.</p>
         <v-btn color="#FF6433" dark>explore now</v-btn>
-        </v-card>
-      </v-col>
-      <v-col  class="text-center" cols="10" md="3">
-        <v-card class="how-card " height="470" width="270" elevation="0">
-          <v-img  contain max-width="195" height="195" class="mx-auto" src="@/assets/delivery.png"></v-img>
+          </v-card>
+            </v-col>
+             <v-col cols="12" sm="6" md="4">
+              <v-card class="how-card text-center" height="470" width="270" elevation="0">
+         <v-img  contain max-width="195" height="195" class="mx-auto" src="@/assets/delivery.png"></v-img>
           <p class="how-title">Product Delivery</p>
           <br>
           <p class="text-center how-text ">&nbsp; We ship the products to you.<br> You can pick up the products<br> at our designated warehouse<br> or have us deliver them to your doorstep.</p>
-          <v-btn color="#FF6433" class="mt-7" dark>explore now</v-btn>
+          <br><v-btn color="#FF6433" class="mt-7" dark>explore now</v-btn>
         </v-card>
-      </v-col>
-    </v-row>
-    </v-container>
-    <v-container  class="complicated">
-      <v-row>
-        <v-col class="missions" cols="12" md="3">
-          <v-card  class="mission-card ">
+            </v-col>
+           </v-row>
+              </v-container>
+     <v-container  class="complicated">
+      <v-row class="missions-row">
+         <v-col class="missions" cols="12" sm="6" md="4">
+          <v-card  class="mission-card " height= '385'>
             <p class="mission">Our mission is to create a sustainable bridge between consumer goods and employment opportunities across all sectors, thereby making Africa a global marketplace.</p>
           </v-card>
           <v-card class="goal-card">
             <p class="goal">“Our goal is to help brands grow on a global scale and meet the needs of the end users.” </p>
           </v-card>
         </v-col>
-        <v-col class="ratings" cols="12" md="4">
+         <v-col class="ratings" cols="12" sm="6" md="4">
           <v-card class="ratings-card" width="208" height="209">
              <p class="rates">4.9/5.0</p>
-     <v-rating
-     class="stars"
-         v-model="rating"
-        color="#ffd308"
-        dense
-        value="5"
-        size="16"
+     <v-rating class="stars" v-model="rating" color="#ffd308" dense value="5" size="16"
       ></v-rating>
       <p class="ratings-text "> Fast product delivery rate which is second to none</p>
              </v-card>
 
               <v-card class="logistics">
-           <p class="logistics-text ">&nbsp; “Products in large &nbsp; &nbsp;quantities will be properly handled with our team of experts on ground.<br>
+           <p class="logistics-text ">&nbsp; “Products in large &nbsp;quantities will be properly handled with our team of experts on ground.<br>
 <br>We have local branches or warehousing to accomodate & cater for  any sudden mishap with logistics”.
 
 </p>
              </v-card>
         </v-col>
-        <v-col class="brand-cols" cols="12" md="3">
+        <v-col class="brand-cols" cols="12" sm="12" md="3">
           <v-card elevation="0" class="brands-card" width="373" max-height="480">
             <p class="brands-title">BRANDS COMPETITIVE EDGE</p>
          <p class="brands-head"> Build Your Brand</p>
@@ -195,62 +192,53 @@
         </v-col>
       </v-row>
     </v-container>
-
-      <v-container fluid class="mt-16">
+      <v-container fluid class="mt-10">
     <v-row align="center" class="pt-14" justify="center">
       <v-col class="text-center mb-5" cols="12">
         <p class="testimony">GREAT WORDS ABOUT NILE GLOBAL</p>
-        <h1>What make they love us?</h1>
+        <h1>What make them love us?</h1>
       </v-col>
     </v-row>
       </v-container>
-    <v-container fluid>
-      <splide :options="options">
-    <splide-slide style="width: 487px" class="testimonial" v-for="(story, index) in customerStory" :key="index">
-       <v-card width="487" height="350" class="testimonies py-10 px-14 mb-16" elevation="2">
+         <v-container fluid>
+             <swiper class="swiper" :options="swiperOption">
+    <swiper-slide  class="" v-for="(story, index) in customerStory" :key="index">
+        <v-card  height="300" class="testimonies pt-10 mb-16" elevation="2">
           <p class="testimonial-text mt-4"> {{story.story}}</p>
           <div class="feedback-info"><v-avatar rounded="50" class="mb-4">
-          <v-img width="50"  src="@/assets/man.png" ></v-img></v-avatar>
-<span><p class="feedback-name">&nbsp;{{story.name}}</p>
+          <v-img width="50"  :src="story.img" ></v-img></v-avatar>
+<span class="pl-2 pt-2"><p class="feedback-name">&nbsp;{{story.name}}</p>
 <p class="feedback-job">&nbsp;{{story.occupation}}</p></span></div>
                </v-card>
-    </splide-slide>
-  </splide>
-            </v-container>
-    <v-container fluid>
+    </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
+  </v-container>
+     <v-container fluid>
     <v-row align="center" class="pt-14 px-16" justify="center">
       <v-col cols="2" >
-        <v-img width="77" src="@/assets/stylu.png"></v-img>
+        <v-img width="60" src="@/assets/stylu.png"></v-img>
+      </v-col><v-col cols="2" >
+        <v-img width="60" src="@/assets/stylu.png"></v-img>
+      </v-col><v-col cols="2" >
+        <v-img width="60" src="@/assets/stylu.png"></v-img>
+      </v-col><v-col cols="2" >
+        <v-img width="60" src="@/assets/stylu.png"></v-img>
+      </v-col><v-col cols="2" >
+        <v-img width="60" src="@/assets/stylu.png"></v-img>
       </v-col>
-       <v-col cols="2">
-        <v-img width="56" src="@/assets/tree.png"></v-img>
-      </v-col>
-       <v-col cols="2">
-        <v-img width="85" src="@/assets/pencil.png"></v-img>
-      </v-col>
-       <v-col cols="2">
-        <v-img width="112" src="@/assets/brook.png"></v-img>
-      </v-col>
-       <v-col cols="2">
-        <v-img width="91" src="@/assets/sixbase.png"></v-img>
-      </v-col> <v-col cols="2">
-        <v-img width="91" src="@/assets/alive.png"></v-img>
-      </v-col>
-    </v-row>
+        </v-row>
   </v-container>
-   <v-container fluid>
+     <v-container fluid>
     <v-row align="center" class="pt-14" justify="center">
       <v-col class="text-center" cols="6">
         <p class="text-h6 text-center font-weight-bold">Discover some available products</p>
       </v-col>
     </v-row>
-    <v-container style="margin-left: 5%;">
-    <v-container style="margin-right:200px">
-     </v-container>
-    <v-container style="margin-left: 5%;">
-       <splide :options="prodoptions">
-    <splide-slide style="width: 400px" class="testimonial" v-for="i in 4" :key="i">
-              <v-card  elevation="1" height="" style="margin-bottom:50px" width="347">
+     <v-container>
+             <swiper class="swiper" :options="swiperOptionProd">
+    <swiper-slide  style="width: 400px" class="" v-for="i in 4" :key="i">
+        <v-card  elevation="1" height="" style="margin-bottom:50px" width="347">
         <v-img contain src="@/assets/chair.png" ></v-img>
         <div class="product pt-3 mb-5">
          <v-row>
@@ -259,24 +247,26 @@
            </v-col>
            <v-col class="ml-6" ><p class="price text-right">N50000</p></v-col>
            <v-col cols="7"> <p class="goods-info">Packed with all the essentials to welcome employees or get clients excited.</p></v-col>
-             <v-col cols="6"> <v-btn dark color="#FF6433">ORDER NOW</v-btn></v-col>
-            <v-col class=" goods-quantity text-right"><p>Min. 25 pieces</p></v-col>
+             <v-col cols="6"> <v-btn small dark color="#FF6433">ORDER NOW</v-btn></v-col>
+            <v-col  class=" goods-quantity text-right"><p class="pt-2">Min. 25 pieces</p></v-col>
           </v-row>  </div>
-              </v-card> </splide-slide>
-  </splide>
+              </v-card>
+    </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
+  </v-container>
     </v-container>
-    </v-container>
-    </v-container> <Email/>
+     <Email/>
   <Footer/>
   </v-app>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 import Navbar from '@/components/Navbar.vue'
 import Email from '@/components/Email.vue'
 import Footer from '@/components/Footer.vue'
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-import '@splidejs/splide/dist/css/themes/splide-default.min.css'
 import 'gotham-fonts/fonts/GothamRounded-Medium.ttf'
 
 export default {
@@ -285,51 +275,154 @@ export default {
     Email,
     Navbar,
     Footer,
-    Splide,
-    SplideSlide
+    Swiper,
+    SwiperSlide
   },
   data () {
     return {
+      swiperOptionProd: {
+        slidesPerView: 3,
+        freeMode: true,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          1240: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          },
+          1000: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          540: {
+            slidesPerView: 1.5,
+            spaceBetween: 15
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
+      },
+      swiperOption: {
+        slidesPerView: 3,
+        freeMode: true,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          1240: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          },
+          1000: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
+      },
       customerStory: [
         {
           story: '"Ever since I started doing business with Nile Global Service, my cocoa business has been booming. \n No more on and off business season for me again. They’re giving local businesses like mine, the opportunity to do business on a global scale and grow financially.”',
           name: 'Mr. Sayeed Olawale ',
-          occupation: 'Farmer & Entrepreneur'
+          occupation: 'Farmer & Entrepreneur',
+          img: require('../assets/testimonial-img/Mr.-Sayeed-Olawale.jpg')
         },
         {
           story: '"I have used NGS for numerous times now and on each occasion, they have surpassed my expectations. No mistakes, no damaged goods in transit, 100% professionals from start to finish.”',
           name: ' Amara Odenigbo',
-          occupation: 'Real Estate Developer'
+          occupation: 'Real Estate Developer',
+          img: require('@/assets/testimonial-img/Amara-Odenigbo.jpg')
         },
         {
           story: '"Nile Global Service came at the right time. After been the usual victim of expensive and poorly branded products. I gave NGS a trail and have not looked back since then. I always import quality branded products & souvenirs from china, stress free. Delivered to my doorstep.”',
           name: 'Sharon Tolulope ',
-          occupation: ' Event Planner'
+          occupation: ' Event Planner',
+          img: require('@/assets/testimonial-img/sharon-tolulope.jpg')
+
         },
         {
           story: '"Staying in business in the ever competitive Nigerian market is hard work. NGS foreign exchange service is a blessing to me. Kudos. Keep up the good work”.',
           name: ' Mrs. Blessing Amadi ',
-          occupation: 'Fashion Entrepreneur'
+          occupation: 'Fashion Entrepreneur',
+          img: require('@/assets/testimonial-img/mrs-blessing-amadi.jpg')
+
         },
         {
           story: '"As a businessman who deals in timber and agricultural produce. Working with foreign based businesses was a pipe dream till Nile Global came into the picture. Partnering with NGS has made my business grow rapidly. Thank You.”',
           name: ' Mr. Segun Victor  ',
-          occupation: 'Entrepreneur'
+          occupation: 'Entrepreneur',
+          img: require('@/assets/testimonial-img/Mr.-Segun-Victor.jpg')
         },
         {
           story: '"Thanks to Nile Global, I shipped all baking machinery for my bakery business and I have not experienced any technical issues. My output rate is on the rise. One year & counting on the horizon.”',
           name: '  Kome Savage ',
-          occupation: 'Bakery & Confectionary'
+          occupation: 'Bakery & Confectionary',
+          img: require('@/assets/testimonial-img/kome-savage.jpg')
         },
         {
           story: '"Importing timber from Africa is an extreme sport. It’s either some are damaged, spoilt or not properly handled. Partnering with Nile Global is changing the narrative about African businesses. I now import quality timber and logs of wood at business friendly rates”',
           name: ' Michael Wong ',
-          occupation: 'Import Trade Expert'
+          occupation: 'Import Trade Expert',
+          img: require('@/assets/testimonial-img/Michael-Wong.jpg')
         },
         {
           story: '"As the middleman, NGS enhanced my business growth. I don’t only handle local clients, but I also perform foreign exchange transactions with individuals and companies who are open to do business”',
           name: ' Richard King',
-          occupation: 'Sales Executive'
+          occupation: 'Sales Executive',
+          img: require('@/assets/testimonial-img/richard-king.jpg')
+
+        },
+        {
+          story: '"Ever since I started using NGS, my salon business has been seen in a different light. I now get more value for money. No more repairs for quack equipments.”',
+          name: ' Orlu Amarachi',
+          occupation: ' Hair Stylist',
+          img: require('@/assets/testimonial-img/orlu-amarchi.jpg')
+
+        },
+        {
+          story: '"Nile Global is second to none for me, especially their logistics team. Professionals all the way”',
+          name: ' Isaac Alasia ',
+          occupation: 'Printer',
+          img: require('@/assets/testimonial-img/Isaac-Alasia.jpg')
+        },
+        {
+          story: '"My business has been experiencing difficulty in breaking even and staying afloat. I booked an appointment with one of NGS’ business expatriates and I can now say, the rest is history. No more worries or fear of failures, reduces expenditures, more profit”',
+          name: ' Felix Osage',
+          occupation: 'Photographer',
+          img: require('@/assets/testimonial-img/Felix-Osage.jpg')
+
+        },
+        {
+          story: '"I’m now every customers’ favorite vendor. Kudos to Nile Global and their team”',
+          name: ' Michael Ezekiel ',
+          occupation: 'Entrepreneur',
+          img: require('@/assets/testimonial-img/Michael-Wong.jpg')
         }
       ],
       options: {
@@ -340,13 +433,13 @@ export default {
         gap: '3.5rem',
         pagination: 'slider',
         breakpoints: {
-          1024: {
-            perPage: 3
+          1092: {
+            perPage: 2
           },
           768: {
             perPage: 2
           },
-          640: {
+          690: {
             perPage: 1,
             spaceBetween: 20
           },
@@ -367,7 +460,7 @@ export default {
             perPage: 3
           },
           768: {
-            perPage: 2
+            perPage: 1
           },
           640: {
             perPage: 1,
@@ -389,35 +482,233 @@ export default {
   background-image: url('../assets/containers.png');
   background-size: contain;
 }
+
+@media screen and (max-width: 359px) {
+  .testimonies {
+  position: relative;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.testimonial-text{
+  font-family: 'Gotham-light', sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
+}
+.feedback-info{
+  display: flex;
+  position: absolute;
+  top: 250px
+  }
+  .feedback-job {
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+}
+ @media screen and (max-width: 420px) {
+ .brands-row{
+  margin-left: auto;
+  margin-right: auto;
+}
+.brands-btn {
+    margin-top: 12px;
+  }
+   .services-row{
+  margin-left: auto;
+  margin-right: auto;
+}
+.beneifits-row {
+   margin-left: auto;
+  margin-right: auto;
+}
+     .ratings-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 54.6px;
+}
+    .goal-card{
+  margin-top: 40px;
+  margin-left: 100px;
+  width: 252.603px;
+  height: 137.8px;
+  padding-left: 33px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.mission-card {
+  height: 385px;
+  padding-left: 60.4px;
+  padding-right: 55px;
+  padding-top: 75px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mission {
+  font-family: 'Gotham', sans-serif;
+font-size: 17px;
+font-style: normal;
+font-weight: 350;
+line-height: 32.5px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+   .logistics {
+  height: 385px;
+  padding-left: 60px;
+  padding-right: 55px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 53.3px;
+}
+.how-it-works{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ratings{
+  height: 700px;
+  background-image: url('../assets/shape-circle.png'), url('../assets/big-circle.png');
+  background-position: 40px 020px, 200px 600px;
+    animation: anime-circle 10s linear infinite alternate;
+}
+   } @media screen and (min-width: 421px) and (max-width: 541px) {
+     .brands-row{
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.brands-btn {
+    margin-left: 20px;
+
+  }
+.beneifits-row {
+   margin-left: 45px;
+  margin-right: 45px;
+}
+.services-row {
+   margin-left: 45px;
+  margin-right: 45px;
+}
+     .ratings-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 54.6px;
+}
+    .goal-card{
+  margin-top: 40px;
+  margin-left: 150px;
+  width: 252.603px;
+  height: 137.8px;
+  padding-left: 33px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.missions-row {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+.mission-card {
+  height: 385px;
+  padding-left: 60.4px;
+  padding-right: 55px;
+  padding-top: 75px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mission {
+  font-family: 'Gotham', sans-serif;
+font-size: 17px;
+font-style: normal;
+font-weight: 350;
+line-height: 32.5px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+   .logistics {
+  height: 350px;
+  padding-left: 60px;
+  padding-right: 55px;
+  padding-top: 65px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 53.3px;
+}
+.how-it-works{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ratings{
+  height: 700px;
+  background-image: url('../assets/shape-circle.png'), url('../assets/big-circle.png');
+  background-position: 40px 020px, 200px 600px;
+    animation: anime-circle 10s linear infinite alternate;
+}
+   }
+   @media screen and (max-width: 600px){
+.process-cont{
+  margin-left:25%;
+}
+}
 @media screen and (max-width: 620px) {
-/* .head{
+  .headss{
   background-image: url('../assets/containers.png');
-  background-size: cover;
-  background-position: center;
-} */
+  background-size: 100% 100%;
+  padding-bottom: 90px;
+}
 .contents {
-  margin-top: 8.4%;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
-.brands-row{
-  margin-left: 15%;
-  margin-right: 15%;
+.about {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  width: 500px
 }
+.brand {
+  margin-top: -135px;
+  margin-left: 10%;
+}
+/* .brands-row{
+  margin-left: 45px;
+  margin-right: 45px;
+} */
 .header-title {
     font-family: 'Gotham', sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     color: #FFFFFF;
-    line-height: 30px;
+    line-height: 35px;
     text-align: center;
     font-weight: 300;
 }
 .niles-global {
-  font-family: 'Gotham', sans-serif;
-font-size: 15px;
+  font-family: 'Gotham-light', sans-serif;
+font-size: 13px;
 font-style: normal;
 font-weight: 400;
-line-height: 22px;
+line-height: 14 px;
 letter-spacing: 0em;
 text-align: center;
 }
@@ -427,27 +718,145 @@ text-align: center;
 .header-button1 {
   margin-left: 100px;
 }
+.brands-card {
+  padding-top: 10px;
+  /* margin-left: px; */
 }
-.about {
-  text-align: center;
-  padding-left: 42.9px;
-  padding-right: 42.9px;
-  padding-top: 40px;
+.how-card {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
 }
-   @media screen and (min-width: 621px) {
-     /* .head{
-  background-image: url('../assets/containers.png');
-  background-size: cover;
-  background-position: center;
-} */
-.header-title {
+}
+@media screen and (max-width: 800px) {
+.header-button {
+  padding-left: 180px;
+}
+.header-button1 {
+  padding-left: 50px;
+}
+}
+@media screen and (max-width: 959px) {
+  .how-title {
+  font-family: 'Gotham', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 350;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+}
+}
+@media screen and (min-width: 360px) {
+  .testimonies {
+  position: relative;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+.testimonial-text{
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+}
+.feedback-info{
+  display: flex;
+  position: absolute;
+  top: 250px
+  }
+  .feedback-job {
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+}
+  @media screen and (min-width: 600px) {
+      .logistics {
+  width: 252.6px;
+  height: 385px;
+  padding-left: 27.3px;
+  padding-right: 26.8px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin-left: 60px;
+  margin-top: 53.3px;
+}
+      .ratings-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 54.6px;
+  margin-left: 60px;
+}
+      .goal-card{
+  margin-top: 71.412px;
+  margin-left: 80px;
+  width: 252.603px;
+  height: 137.8px;
+  padding-left: 33px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.mission-card {
+  width: 300px;
+  height: 385px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 60px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.mission {
+  font-family: 'Gotham', sans-serif;
+font-size: 15.6px;
+font-style: normal;
+font-weight: 350;
+line-height: 32.5px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+.ratings{
+  height: 800px;
+  background-image: url('../assets/shape-circle.png'), url('../assets/big-circle.png');
+  background-position: 40px 020px, 200px 600px;
+    animation: anime-circle 10s linear infinite alternate;
+}
+   }
+@media screen and (min-width: 621px) {
+  .header-title {
+    font-family: 'Gotham', sans-serif;
     font-size: 40px;
     color: #FFFFFF;
-    line-height: 30px;
+    line-height: 40px;
     text-align: center;
     font-weight: 300;
 }
+  .headss{
+  background-image: url('../assets/containers.png');
+  background-size: 100% 100%;
+  padding-bottom: 90px;
+}
+.about {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  width: 500px
+}
 .niles-global {
+  font-family: "Gotham-light", sans-serif;
 font-size: 15px;
 font-style: normal;
 font-weight: 400;
@@ -456,50 +865,178 @@ letter-spacing: 0em;
 text-align: center;
 }
 .contents {
-  margin-top: 8.4%;
-  margin-left: 25%;
-  margin-right: 24%;
+  margin: 5% auto 5px;
+  width: 70%;
 }
- .header-title {
-    font-size: 65px;
-     font-family: 'Gotham', sans-serif;
-     color: #FFFFFF;
-     text-align: center;
-     font-weight: 400;
-     line-height: 65px;
-     letter-spacing: 0em;
-  }
-   .niles-global {
-    font-size: 18px;
-     font-family: 'Gotham', sans-serif;
-     color: #FFFFFF;
-     text-align: center;
-     font-weight: 400;
-     line-height: 28.6px;
-     letter-spacing: 0em;
-     text-align: center;
-  }
  .header-button {
   margin-left: 150px;
 }
 .header-button1 {
   margin-left: 90px;
 }
+.brand {
+  margin-top: -135px;
+  margin-left: 10%;
 }
-.starts{
-   margin-top: 8.4%;
-   margin-left: 10%;
+.brands-card {
+  padding-top: 10px;
+  margin-left: 70px;
 }
-@media screen and (min-width: 960px) {
-  .header-title {
-    font-size: 40px;
+.how-card {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+ @media screen and (min-width: 650px) {
+      .logistics {
+  width: 252.6px;
+  height: 385px;
+  padding-left: 27.3px;
+  padding-right: 26.8px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin-left: 60px;
+  margin-top: 53.3px;
+}
+      .ratings-card {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 54.6px;
+  margin-left: 60px;
+}
+      .goal-card{
+  margin-top: 71.412px;
+  margin-left: 80px;
+  width: 252.603px;
+  height: 137.8px;
+  padding-left: 33px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.mission-card {
+  width: 300px;
+  height: 385px;
+  padding-left: 60.4px;
+  padding-right: 55px;
+  padding-top: 75px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.mission {
+  font-family: 'Gotham', sans-serif;
+font-size: 15.6px;
+font-style: normal;
+font-weight: 350;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
+.ratings{
+  height: 800px;
+  background-image: url('../assets/shape-circle.png'), url('../assets/big-circle.png');
+  background-position: 40px 020px, 200px 600px;
+    animation: anime-circle 10s linear infinite alternate;
+}
+   }
+   @media screen and (min-width: 691px) {
+.testimonial-text{
+  font-family: 'Gotham-light', sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: 350;
+line-height: 20.8px;
+letter-spacing: 0em;
+text-align: left;
+}
+.feedback-info{
+  display: flex;
+  position: absolute;
+  top: 250px
+  }
+  .feedback-job {
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+}
+@media screen and (min-width: 768px) {
+  .brands-btn {
+    margin-left: 20px;
+  }
+.testimonies {
+  position: relative;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+.testimonial-text{
+  font-family: 'Gotham-light', sans-serif;
+font-size: 17px;
+font-style: normal;
+font-weight: 350;
+line-height: 20.8px;
+letter-spacing: 0em;
+text-align: left;
+}
+.feedback-info{
+  display: flex;
+  position: absolute;
+  top: 200px
+  }
+  .feedback-job {
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+}
+ @media screen and (min-width: 806px) {
+     .header-title {
+    font-family: 'Gotham', sans-serif;
+    font-size: 50px;
     color: #FFFFFF;
-    line-height: 30px;
+    line-height: 45px;
     text-align: center;
     font-weight: 300;
 }
+
+   }
+@media screen and (min-width: 960px) {
+  .headss{
+  background-image: url('../assets/containers.png');
+  background-size: 100% 100%;
+  padding-bottom: 90px;
+}
+  .header-title {
+    font-size: 50px;
+    color: #FFFFFF;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 300;
+}
+.about {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  width: 350px;
+  }
 .niles-global {
-font-size: 15px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 22px;
@@ -512,34 +1049,64 @@ text-align: center;
 .header-button1 {
   margin-left: 120px;
 }
-
+.how-card {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .brand {
-  margin-top: 40px;
+  margin-top: -145px;
   margin-left: 10%;
 }
+.contents {
+  margin-top: 90px;
+  margin: 5% auto 10px;
+  width: 60%;
 }
-@media screen and (max-width: 800px) {
-.header-button {
-  padding-left: 180px;
-}
-.header-button1 {
-  padding-left: 50px;
+.brands-card {
+  padding-top: 75px;
 }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1011px) {
+    .about {
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top:35px;
+  width: 450px;
+  }
+}
+  @media screen and (min-width: 1264px) {
+    .headss{
+  background-image: url('../assets/containers.png');
+  background-size: 100% 100%;
+  padding-bottom: 90px;
+}
 .brand {
-  margin-top: 60px;
+  margin-top: -165px;
   margin-left: 10%;
 }
 .header-title {
-    font-size: 65px;
+    font-size: 60px;
      font-family: 'Gotham', sans-serif;
      color: #FFFFFF;
      text-align: center;
      font-weight: 400;
-     line-height: 65px;
+     line-height: 70px;
      letter-spacing: 0em;
   }
+  .how-card {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .contents {
+  margin-top: 4.5%;
+  margin-bottom: 69px;
+  width: 50%;
+}
    .niles-global {
     font-size: 18px;
      font-family: 'Gotham', sans-serif;
@@ -550,6 +1117,53 @@ text-align: center;
      letter-spacing: 0em;
      text-align: center;
   }
+  .about {
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 40px;
+  width: 450px;
+  }
+.brands-card {
+  padding-top: 75px;
+}
+}
+@media screen and (min-width: 1024px) {
+  .testimonies {
+  position: relative;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+.testimonial-text{
+  font-family: 'Gotham-light', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 350;
+line-height: 20.8px;
+letter-spacing: 0em;
+text-align: left;
+}
+.feedback-info{
+  display: flex;
+  position: absolute;
+  top: 250px
+  }
+  .feedback-job {
+  font-family: 'Gotham-light', sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 350;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
+}
+}
+
+.starts{
+   margin-top: 8.4%;
+   margin-left: 10%;
 }
 .card-header{
   font-family: 'Gotham', sans-serif;
@@ -562,16 +1176,16 @@ text-align: center;
 
 }
 .card-text {
-font-family: 'Gotham', sans-serif;
+font-family: 'Gotham-Light', sans-serif;
 font-size: 15.6px;
 font-style: normal;
 font-weight: 325;
 line-height: 23.4px;
 letter-spacing: 0em;
 text-align: center;
+color: #5B5B5B;
 
 }
-
 .great {
   font-family: 'Gotham', sans-serif;
 font-size: 13px;
@@ -635,7 +1249,7 @@ margin-top: 57px;
 .services-card {
   text-align: center;
   box-shadow: 0px 0px 15px 5px #0000000D;
-   text-align: center;
+  text-align: center;
   padding-left: 22px;
   padding-right: 21px;
   padding-top: 72px;
@@ -663,7 +1277,7 @@ color: #000000;
 
 }
 .services-text {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham-Light', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 325;
@@ -689,11 +1303,13 @@ text-align: center;
   margin-top: 100px;
 }
 .how-card {
-  padding-left: 22px;
+  padding-left: 21px;
   padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .how-text {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham-Light', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 325;
@@ -702,19 +1318,8 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.how-title {
-  font-family: 'Gotham', sans-serif;
-font-size: 26px;
-font-style: normal;
-font-weight: 350;
-line-height: 31px;
-letter-spacing: 0em;
-text-align: center;
-color: #5B5B5B;
-
-}
 .testimony {
-font-family: Gotham;
+font-family: 'Gotham', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 325;
@@ -756,7 +1361,7 @@ text-align: left;
 
 }
 .goods-info {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham-Light', sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 325;
@@ -768,7 +1373,7 @@ color: #C4C4C4;
 }
 .goods-quantity{
 font-family: 'Gotham', sans-serif;
-font-size: 12px;
+font-size: 10px;
 font-style: normal;
 font-weight: 350;
 line-height: 14px;
@@ -787,14 +1392,6 @@ text-align: center;
 color: #5B5B5B;
 
 }
-.testimonies {
-  position: relative;
-}
-.feedback-info{
-  display: flex;
-  position: absolute;
-  top: 250px
-  }
 .headers {
   font-family: 'Gotham', sans-serif;
 font-size: 65px;
@@ -806,24 +1403,11 @@ text-align: center;
 color: #FFFFFF;
 }
 .complicated{
-  margin-left: 9%;
   margin-top: 115.7px;
-}
-.mission {
-  font-family: 'Gotham', sans-serif;
-font-size: 15.6px;
-font-style: normal;
-font-weight: 350;
-line-height: 32.5px;
-letter-spacing: 0em;
-text-align: center;
-color: #5B5B5B;
-
 }
 .missions {
   background-image: url("../assets/shape-slant-dots.png");
   background-position: -2px 400px;
-  margin-left: 5%;
   background-size: 162px;
   width: 500px;
   animation: anime 10s linear infinite alternate;
@@ -837,25 +1421,6 @@ color: #5B5B5B;
      background-position: 200px 500px;
      }
 }
-
-.mission-card {
-  width: 320px;
-  height: 385px;
-  padding-left: 60.4px;
-  padding-right: 55px;
-  padding-top: 75px;
-  margin-top: 50px;
-  margin-left: 45px;
-}
-.goal-card{
-  margin-top: 71.412px;
-  margin-left: 35px;
-  width: 252.603px;
-  height: 137.8px;
-  padding-left: 33px;
-  padding-right: 30px;
-  padding-top: 30px;
-}
 .goal {
   font-family: 'Gotham', sans-serif;
 font-size: 15.6px;
@@ -866,12 +1431,6 @@ letter-spacing: 0em;
 text-align: center;
 color: #C4C4C4;
 }
-.ratings{
-  height: 800px;
-  background-image: url('../assets/shape-circle.png'), url('../assets/big-circle.png');
-  background-position: 40px 020px, 200px 600px;
-    animation: anime-circle 10s linear infinite alternate;
-}
 @keyframes anime-circle {
   from {
      background-position: 40px 20px, 200px 600px;
@@ -879,12 +1438,6 @@ color: #C4C4C4;
   to {
      background-position: 90px -5px, 200px 100px;
      }
-}
-.ratings-card {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 54.6px;
-  margin-left: 60px;
 }
 .rates {
   font-family: 'Gotham', sans-serif;
@@ -896,16 +1449,6 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.logistics {
-  width: 252.6px;
-  height: 385px;
-  padding-left: 27.3px;
-  padding-right: 26.8px;
-  padding-top: 65px;
-  padding-bottom: 65px;
-  margin-left: 60px;
-  margin-top: 53.3px;
-}
 .logistics-text {
   font-family: 'Gotham', sans-serif;
 font-size: 15.6px;
@@ -915,27 +1458,6 @@ line-height: 23.4px;
 letter-spacing: 0em;
 text-align: center;
 color: #5B5B5B;
-
-}
-.mission {
-  font-family: 'Gotham', sans-serif;
-font-size: 15.6px;
-font-style: normal;
-font-weight: 600;
-line-height: 25px;
-letter-spacing: 0em;
-text-align: center;
-color: #5B5B5B;
-
-}
-.testimonial-text{
-  font-family: 'Gotham', sans-serif;
-font-size: 13px;
-font-style: normal;
-font-weight: 350;
-line-height: 20.8px;
-letter-spacing: 0em;
-text-align: left;
 
 }
 .brand-cols{
@@ -952,12 +1474,10 @@ text-align: left;
 color: #5B5B5B;
 
 }
-.brands-card {
-  padding-top: 75px;
-}
+
 .brands-head {
   font-family: 'Gotham', sans-serif;
-font-size: 45px;
+font-size: 40px;
 font-style: normal;
 font-weight: 350;
 line-height: 58.5px;
@@ -989,40 +1509,21 @@ letter-spacing: 0em;
 text-align: center;
 color: #C4C4C4;
 }
-.splide__pagination__page{
-  background-color: #ff6433;
+.brands-text{
+font-family: 'Gotham', sans-serif;
+font-size: 15.6px;
+font-style: normal;
+font-weight: 350;
+line-height: 22.1px;
+letter-spacing: 0em;
+text-align: left;
+color: #C4C4C4;
+
 }
-.splide__pagination__page {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #b92d2d;
-    border-radius: 50%;
-    margin: 3px;
-    padding: 0;
-    transition: transform .2s linear;
-    border: none;
-    opacity: .7;
-}
-/* .splide__pagination__page.is-active {
-    transform: scale(1.4);
-    background: red;
-}
-.splide__pagination{
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #b92d2d;
-    border-radius: 50%;
-    margin: 3px;
-    padding: 0;
-    transition: transform .2s linear;
-    border: none;
-    opacity: .7;
-} */
+
 .feedback-name {
   font-family: 'Gotham', sans-serif;
-font-size: 13px;
+font-size: 15px;
 font-style: normal;
 font-weight: 350;
 line-height: 15.6px;
@@ -1033,18 +1534,31 @@ margin-bottom: 2px;
 /* margin-top: 16px; */
 
 }
-.feedback-job {
-  font-family: 'Gotham', sans-serif;
-font-size: 10.4px;
-font-style: normal;
-font-weight: 350;
-line-height: 13px;
-letter-spacing: 0em;
-text-align: left;
-color: #C4C4C4;
-
-}
 v-btn{
   font-family: 'Gotham', sans-serif;
+}
+@media screen and (min-width: 960px) {
+  .how-title {
+  font-family: 'Gotham', sans-serif;
+font-size: 22px;
+font-style: normal;
+font-weight: 350;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+}
+}
+@media screen and (min-width: 1264px) {
+  .how-title {
+  font-family: 'Gotham', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 350;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+}
 }
 </style>

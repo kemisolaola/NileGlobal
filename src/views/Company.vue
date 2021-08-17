@@ -34,6 +34,10 @@ export default {
 }
 </script>
 <style scoped>
+@font-face {
+  font-family: 'Gothams';
+  src: url("~@/assets/gotham-fonts/GothamPro-Light.woff"), local('Gotham') format('truetype');
+}
 .company{
     padding-top: 9%;
     padding-left: 16.4%;
@@ -41,19 +45,28 @@ export default {
     padding-bottom: 5%;
 }
 
+@media screen and (max-width: 768px) {
+.company-story {
+font-family: 'Gotham-light', sans-serif;
+font-size: 16px;
+font-style: normal;
+line-height: 20px;
+color: #9c9c9c;
+}
+}
 @media screen and (min-width: 1025px) {
 .company-story {
-font-family: 'Gotham', sans-serif;
-font-size: 24px;
+font-family: 'Gotham-light', sans-serif;
+font-size: 18px;
 font-style: normal;
-font-weight: 325;
-line-height: 32px;
+line-height: 22px;
 letter-spacing: 0em;
 text-align: justify;
+font-weight: lighter;
 color: #9c9c9c;
 }
 .story {
-font-family:' Gotham', sans-serif;
+font-family:'Gotham', sans-serif;
 font-size: 39px;
 font-style: normal;
 font-weight: 700;
@@ -63,19 +76,18 @@ text-align: justify;
 color: #5b5b5b;
 }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
 .company-story {
-font-family: 'Gotham', sans-serif;
+font-family: 'Gotham-light', sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 325;
 line-height: 25px;
-letter-spacing: 0em;
 text-align: justify;
 color: #9c9c9c;
 }
 .story {
-font-family:' Gotham', sans-serif;
+font-family:'Gotham', sans-serif;
 font-size: 30px;
 font-style: normal;
 font-weight: 700;

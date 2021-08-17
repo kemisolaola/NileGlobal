@@ -1,8 +1,8 @@
 <template>
   <v-footer class="mt-10 footer-container white" >
       <v-row align="center" class="mt-4" justify="center" >
-        <v-col cols="12" md="5">
-               <div class=""><router-link to="./"><v-img max-width="250" src="@/assets/nilelogo.png"></v-img></router-link></div>
+        <v-col  class="pl-6" cols="12" sm="4" md="6">
+               <div><router-link to="./"><v-img max-width="250" src="@/assets/nilelogo.png"></v-img></router-link></div>
  <p class="pt-5">Our mission is to create a sustainable bridge between consumer goods and employment opportunities across
              all sectors, thereby making Africa a global marketplace.</p>
         <v-row class="mt-3">
@@ -20,13 +20,13 @@
       </v-col>
     </v-row>
         </v-col>
-        <v-col cols="6" md="3" class="text-left">
+        <v-col cols="6" sm="4" md="3" class="text-left">
           <ul>
             <p class="footer-head">Navigation</p>
         <li class="links" v-for="link in navLinks" v-bind:key="link.route">
           <router-link :to="{path:link.route}">{{link.name}}</router-link>
         </li>   </ul> </v-col>
-          <v-col cols="6" md="3" class="text-left">
+          <v-col cols="6" sm="4" md="3" class="text-left">
          <ul>
              <p class="footer-head">Information</p>
        <li class="links" v-for="link in infoLinks" v-bind:key="link.route">
@@ -62,9 +62,21 @@ export default {
 </script>
 
 <style scoped>
-.footer-container {
+@media screen and (max-width: 600px) {
+  .footer-container {
+  padding-left: 2%;
+}
+}
+@media screen and (min-width: 601px) {
+  .footer-container {
+  padding-left: 5%;
+}
+}@media screen and (min-width: 960px) {
+  .footer-container {
   padding-left: 13%;
 }
+}
+
 ul{
     list-style: none;
 }

@@ -1,13 +1,14 @@
 <template>
   <v-app>
     <Navbar/>
-    <v-img max-height="336" src="@/assets/exports.png">
-    <v-row align="center" class="pt-14" justify="center">
-            <v-col class="text-center white--text" cols="12">
+    <v-container fluid class="importations">
+    <v-row align="center" class="my-auto" justify="center">
+            <v-col class="text-center white--text mt-16" cols="12">
                 <p class="export-header">Export</p>
-                <p class="header-text" >We create the market for our african clientele. Export raw materials, agricultural produce and more much in large quantities to China.</p>
+                <p class="export-header-text" >We create the market for our african clientele. Export raw materials, agricultural produce and more much in large quantities to China.</p>
             </v-col>
-        </v-row></v-img>
+        </v-row>
+    </v-container>
     <v-container class="export-form">
          <v-container width="690" class="">
              <v-form>
@@ -67,11 +68,11 @@
                       ></v-text-field>
                          </v-col>
                      <v-row v-for="(row, index) in rows" :key="index">
-                  <v-col cols="10" >
+                  <v-col cols="9" >
                     <label>Product Description</label>
                     <v-text-field  v-model="row.title" solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
                 </v-col>
-                <v-col cols="2">
+                <v-col cols="3">
                     <label>Qty</label>
                     <v-text-field type="number" v-model="row.qty" solo flat background-color="#FAFAFA" placeholder="Qty"  ></v-text-field>
                 </v-col>
@@ -118,6 +119,24 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 992px) {
+.importations{
+  background-image: url('../assets/exports.png');
+  background-size: cover;
+  background-repeat: no-repeat  ;
+  background-position: center;
+  height: 320px;
+}
+}
+@media only screen  and (max-width: 991px) {
+.importations{
+  background-image: url('../assets/exports.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 270px;
+}
+}
 .export-header{
   font-family: "Gotham", sans-serif;
 font-size: 39px;
@@ -128,7 +147,19 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.header-text {
+@media screen and (max-width: 960px) {
+.export-header-text {
+    font-family: "Gotham", sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 350;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+}
+}
+@media screen and (min-width: 961px) {
+.export-header-text {
     font-family: "Gotham", sans-serif;
 font-size: 18.2px;
 font-style: normal;
@@ -136,9 +167,10 @@ font-weight: 350;
 line-height: 33.8px;
 letter-spacing: 0em;
 text-align: center;
-padding-left: 29%;
-padding-right: 29.4%;
+padding-left: 25%;
+padding-right: 25%;
 
+}
 }
 .export-form {
   padding-top: 50px;

@@ -33,7 +33,7 @@ const routes = [
     component: BuyerSignup
   },
   {
-    path: '/business',
+    path: '/consultation',
     name: 'Business',
     component: Business
   },

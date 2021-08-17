@@ -1,15 +1,15 @@
 <template>
   <v-app>
     <Navbar/>
-    <v-img max-height="336" src="@/assets/import.png">
-    <v-row align="center" class="pt-14" justify="center">
-            <v-col class=" white--text" cols="12">
+    <v-container fluid class="importations">
+    <v-row  class="my-auto">
+            <v-col class=" white--text mt-16" cols="12">
                 <p class="import-header">Import</p>
-                <p class=" import-header-text" >Import products from foreign countries, seamlessly without
-the usual customs, clearing and forwarding debacle.</p>
+                <p class=" import-header-text" >Import products from foreign countries, seamlessly without the usual customs, clearing and forwarding debacle.</p>
             </v-col>
-        </v-row></v-img>
-    <v-container class="import-form">
+        </v-row>
+    </v-container>
+    <v-container class="import-form mx-auto">
          <v-container width="690" class="">
              <v-form>
             <v-row >
@@ -17,12 +17,12 @@ the usual customs, clearing and forwarding debacle.</p>
                     <label>Full Name</label>
                     <v-text-field fixed-label   solo flat background-color="#FAFAFA" placeholder="Full Name"  ></v-text-field>
                 </v-col>
-                <v-col cols="12"  md="6"   >
+                <v-col cols="12"  sm="6"   >
                     <label>Phone Number</label>
                     <v-text-field outlined placeholder="Phone Number"
                       ></v-text-field>
                 </v-col>
-                <v-col cols="12" md="6"   >
+                <v-col cols="12" sm="6"   >
                     <label>Select Option</label>
                     <v-select :items="selectItems" outlined placeholder=""
                       ></v-select>
@@ -34,7 +34,8 @@ the usual customs, clearing and forwarding debacle.</p>
                          </v-col>
                 <v-col cols="12" >
                     <label>Attach Pictures</label>
-                  <v-row class="my-4" justify="center"><v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData})` }"  @click="chooseImage"
+                  <v-row class="my-4" justify="center">
+                    <v-col  cols="6" sm="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData})` }"  @click="chooseImage"
                       >
                         <span  v-if="!imageData"  class="placeholder"      >
                           <v-icon>mdi-plus</v-icon>
@@ -42,7 +43,7 @@ the usual customs, clearing and forwarding debacle.</p>
                         <input class="file-input" ref="fileInput" type="file"  @input="onSelectFile">
                                               </div>
                         </v-col>
-                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData1})` }"  @click="chooseImage1"
+                        <v-col cols="6" sm="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData1})` }"  @click="chooseImage1"
                       >
                         <span  v-if="!imageData1"  class="placeholder"      >
                           <v-icon>mdi-plus</v-icon>
@@ -50,15 +51,15 @@ the usual customs, clearing and forwarding debacle.</p>
                         <input   class="file-input" ref="fileInput1" type="file"  @input="onSelectFile1">
                                               </div>
                         </v-col>
-                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData2})` }"  @click="chooseImage2"
+                        <v-col  cols="6" sm="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData2})` }"  @click="chooseImage2"
                       >
-                        <span  v-if="!imageData2"  class="placeholder"      >
+                        <span  v-if="!imageData2"  class="placeholder" >
                           <v-icon>mdi-plus</v-icon>
                         </span>
                         <input  class="file-input" ref="fileInput2" type="file"  @input="onSelectFile2">
                                               </div>
                         </v-col>
-                        <v-col cols="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData3})` }"  @click="chooseImage3"
+                        <v-col  cols="6" sm="3"> <div class="base-image-input"   :style="{ 'background-image': `url(${imageData3})` }"  @click="chooseImage3"
                       >
                         <span  v-if="!imageData3"  class="placeholder"      >
                           <v-icon>mdi-plus</v-icon>
@@ -69,11 +70,11 @@ the usual customs, clearing and forwarding debacle.</p>
                         </v-row>
                     </v-col>
                                                <v-row v-for="(row, index) in rows" :key="index">
-                                                   <v-col cols="10" >
+                                                   <v-col cols="9" >
                     <label>Product Description</label>
                     <v-text-field  v-model="row.title" solo flat background-color="#FAFAFA" placeholder="Product Description"  ></v-text-field>
                 </v-col>
-                <v-col cols="2">
+                <v-col cols="3">
                     <label>Qty</label>
                     <v-text-field type="number" v-model="row.qty" solo flat background-color="#FAFAFA" placeholder="Qty"  ></v-text-field>
                 </v-col>
@@ -187,6 +188,28 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 992px) {
+.importations{
+  background-image: url('../assets/import.png');
+  background-size: cover;
+  background-repeat: no-repeat  ;
+  background-position: center;
+  height: 320px;
+}
+}
+@media only screen  and (max-width: 991px) {
+.importations{
+  background-image: url('../assets/import.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 270px;
+}
+}
+/* .importations{
+  background-image: url('../assets/import.png');
+  background-size: cover;
+} */
 .base-image-input {
   display: block;
   width: 120px;
@@ -222,19 +245,7 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.import-header-text {
-    font-family: "Gotham", sans-serif;
-font-size: 18.2px;
-font-style: normal;
-font-weight: 350;
-line-height: 33.8px;
-letter-spacing: 0em;
-text-align: center;
-padding-left: 29%;
-padding-right: 29.4%;
-
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
 .import-header-text {
 font-family: "Gotham", sans-serif;
 font-size: 12px;
@@ -243,12 +254,9 @@ font-weight: 350;
 line-height: 20px;
 letter-spacing: 0em;
 text-align: center;
-padding-left: 29%;
-padding-right: 29.4%;
-
 }
 }
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 961px) {
 .import-header-text {
     font-family: "Gotham", sans-serif;
 font-size: 18.2px;
