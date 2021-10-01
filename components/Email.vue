@@ -17,8 +17,10 @@
         </v-col>
     </v-row>
     <v-container>
-    <v-row style="" no-gutters align-content-lg="center" class="email-form-row"  justify-sm="center">
-        <v-col class="email-form" cols="12" sm="7" md="6">
+    <v-row style="" no-gutters justify="center" class="email-form-row"  justify-sm="center">
+      <v-col cols="12">
+        <v-row no-gutters> 
+        <v-col class="email-form" cols="12" sm="7" md="">
           <v-text-field solo flat placeholder="Your Email" style="border-radius: 0" />
         </v-col>
         <v-col class="email-form-btn" cols="4" sm="5" md="6">
@@ -26,6 +28,8 @@
             Subscribe
           </v-btn>
                   </v-col>
+        </v-row>
+      </v-col>
       </v-row>
     </v-container>
             </v-container>
