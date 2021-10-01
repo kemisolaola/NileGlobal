@@ -2,7 +2,7 @@
 <v-app>
   <Navbar/>
     <v-container class="login" justify="center" >
-                   <v-row class="pt-14" justify="center" align="center" >
+                   <v-row class="pt-4" justify="center" align="center" >
               <v-col cols="12" class="text-center">
               <v-container class="contacts" width="1150" elevation="0">
                   <v-row >
@@ -18,7 +18,7 @@
                           <div class="box">
                         <img width="20" height="30" class="mr-5"
                         contain src="calls.png">
-                        <span class="contact-us"><p><span class="contact-head">Contact</span><br> +86 187 4002 6018</p></span>
+                        <span class="contact-us"><p><span class="contact-head">Contact</span><br> +86 187 4002 6018<br>0812 9575 709</p></span>
                         </div></v-col>
                        <v-col cols="12" sm="6" md="4">
                            <div class="box">
@@ -137,9 +137,9 @@ export default {
   }
 .title {
    font-family: 'Gotham', sans-serif;
-font-size: 31 px;
+font-size: 31px;
 font-style: normal;
-font-weight: 350;
+font-weight: 600;
 line-height: 39px;
 letter-spacing: 0em;
 text-align: center;

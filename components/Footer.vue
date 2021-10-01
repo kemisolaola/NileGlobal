@@ -46,13 +46,13 @@ export default {
     return {
       navLinks: [
         { name: 'Home', route: './' },
-        { name: 'Categories', route: './seller' },
+        { name: 'Categories', route: './' },
         { name: 'Services', route: './' },
         { name: 'About Us', route: './' }
       ],
       infoLinks: [
-        { name: 'Contacts', route: './contacts' },
-        { name: 'Terms of use', route: './seller' },
+        { name: 'Contacts', route: './contact' },
+        { name: 'Terms of use', route: './' },
         { name: 'Privacy', route: './' },
         { name: '', route: './' }
       ]

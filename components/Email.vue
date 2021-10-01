@@ -166,7 +166,7 @@ text-align: center;
 @media screen and (max-width: 600px) {
 .email-us {
   font-family: 'Gotham', sans-serif;
-font-size: 22px;
+font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: 25px;
