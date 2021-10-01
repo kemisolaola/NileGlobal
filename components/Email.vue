@@ -9,14 +9,15 @@
       </v-col>
     </v-row>
        </v-container>
-    <v-container fluid class="mt-10 coffee">
+    <v-container fluid class="mt-10 coffee px-0">
     <v-row align="center" class="emails" justify="center">
         <v-col cols="10" md="9">
           <p class="email-us">Get industry tips and import tricks straight into your inbox.</p>
           <p class="email">Enter your email address to get our newsletters. No spam!</p>
         </v-col>
     </v-row>
-    <v-row style="" no-gutters justify="center" class="email-form-row"  justify-sm="center">
+    <v-container>
+    <v-row style="" no-gutters class="email-form-row"  justify-sm="center">
         <v-col class="email-form" cols="12" sm="7" md="6">
           <v-text-field solo flat placeholder="Your Email" style="border-radius: 0" />
         </v-col>
@@ -26,6 +27,7 @@
           </v-btn>
                   </v-col>
       </v-row>
+    </v-container>
             </v-container>
       </v-container>
 </template>

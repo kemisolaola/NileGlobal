@@ -1,6 +1,6 @@
 <template>
 <nav>
- <v-app-bar flat app light color="white"  class=" pl-10 pl-md-8 pl-lg-10 pr-16" height="90" >
+ <v-app-bar flat light color="white"  class=" pl-10 pl-md-8 pl-lg-10 pr-16" height="90" >
         <router-link to="./"><v-img class="mr-8 mr-md-4 mr-lg-8" min-width="200" max-width="200" contain src="nilelogo.png"></v-img></router-link>
         <v-spacer></v-spacer> <v-btn   class="  d-none d-md-flex" to="./"  plain color="black">home</v-btn>
          <v-spacer></v-spacer>
