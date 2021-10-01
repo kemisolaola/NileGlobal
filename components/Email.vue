@@ -16,7 +16,7 @@
           <p class="email">Enter your email address to get our newsletters. No spam!</p>
         </v-col>
     </v-row>
-    <v-row style="" no-gutters :align="align" class="email-form-row"  justify-sm="center">
+    <v-row style="" no-gutters justify="center" class="email-form-row"  justify-sm="center">
         <v-col class="email-form" cols="12" sm="7" md="6">
           <v-text-field solo flat placeholder="Your Email" style="border-radius: 0" />
         </v-col>
