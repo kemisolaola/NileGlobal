@@ -187,7 +187,7 @@
             <p class="brands-title">BRANDS COMPETITIVE EDGE</p>
          <p class="brands-head"> Build Your Brand</p>
             <p class="brands-text">We have strategic partnerhsips which can be leveraged on to boost sales and growth of a brand.</p>
-            <v-btn color="#ff6433" dark class="mt-3">get started</v-btn>
+            <v-btn color="#ff6433" dark class="mt-3 mx-2">get started</v-btn>
             </v-card>
         </v-col>
       </v-row>

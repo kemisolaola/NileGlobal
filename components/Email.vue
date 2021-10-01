@@ -17,7 +17,7 @@
         </v-col>
     </v-row>
     <v-container>
-    <v-row style="" no-gutters class="email-form-row"  justify-sm="center">
+    <v-row style="" no-gutters align-content-lg="center" class="email-form-row"  justify-sm="center">
         <v-col class="email-form" cols="12" sm="7" md="6">
           <v-text-field solo flat placeholder="Your Email" style="border-radius: 0" />
         </v-col>
