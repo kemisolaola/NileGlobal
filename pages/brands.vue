@@ -6,7 +6,9 @@
             <v-col class="white--text text-center" cols="12">
                 <p class="seller-header">Evolving brands to <br>global frontiers</p>
                 <p class=" header-text">Improve sales and unlock opportunities<br> for your brand’s growth</p>
-                   <v-btn class="mb-3" color="#ff6433" to="./brandsignup" dark> Sign up now</v-btn>
+                  <nuxt-link  to="/brandsignup">
+                   <button class="buyers-btns mb-3" color="#FF6433" to="/buyer"  dark>SIGNUP NOW</button>
+                   </nuxt-link>
                     <br>
                     <!-- <v-btn class="fab" fab><v-img height='15' width="12" contain src="Polygon 6.png"></v-img></v-btn> -->
             </v-col>
@@ -96,6 +98,20 @@ export default {
 </script>
 
 <style scoped>
+.buyers-btns{
+ background-color: #ff6433;
+font-family: 'Gotham', sans-serif;
+font-size: 12px;
+width: 140px;
+height: 35px;
+font-style: normal;
+line-height: 10px;
+letter-spacing: 0em;
+color: #ffffff;
+text-align: center;
+border-radius: 4px;
+
+}
 @media only screen and (max-width: 767px) {
   .headers{
     margin-top: 40px;

@@ -5,7 +5,9 @@
     <v-row  class="headers" align="center"  justify="center">
             <v-col class="text-center white--text" cols="12">
                 <p class="top-header">Discover Africa’s leading<br> brands in a single place</p>
-                    <v-btn color="#ff6433 " to="./buyersignup" dark> Sign up now</v-btn>
+                   <nuxt-link to="/buyer">
+                   <button class="buyers-btns" color="#FF6433" to="/signup/buyer"  dark>SIGNUP NOW</button>
+                   </nuxt-link>
             </v-col>
         </v-row>
     </v-container>
@@ -30,7 +32,9 @@
           <div class="content-right"  style="border: 0;">
  <v-card elevation="0">
          <p class="timeline-title">Join the NileGlobal<br> Marketplace</p>
-         <p class="process">Sign-up today and get access<br> to our ever-growing database of<br> established and upcoming brands.</p>
+         <p class="process mb-0">Sign-up today and get access</p>
+         <p class="process mb-0"> to our ever-growing database of</p>
+         <p class="process"> established and upcoming brands.</p>
         </v-card>          </div>
         </div>
               </div>
@@ -38,7 +42,10 @@
         <div class="content-left-container">
           <div class="content-left" style="border: 0;  padding-top: 110px">
          <p class="timeline-title-right">Discover Brands</p>
-         <p class="process-right">Browse through numerous<br> catergories on the platform and<br> locate brands with quality products,<br> awaiting for your orders.</p>
+         <p class="process-right  mb-0">Browse through numerous</p>
+         <p class="process-right  mb-0"> catergories on the platform and</p>
+         <p class="process-right mb-0"> locate brands with quality products,</p>
+         <p class="process-right"> awaiting for your orders.</p>
               </div>
         </div>
         <div class="content-right-container"  style="border: 0;">
@@ -59,7 +66,7 @@
           <div class="content-right"  style="border: 0;">
  <v-card  elevation="0">
          <p class="timeline-title">Discover Brands</p>
-         <p class="process">Browse through numerous<br> catergories on the platform and<br> locate brands with quality products,<br> awaiting for your orders.</p>
+         <p class="process">Browse through numerous catergories on the platform and locate brands with quality products, awaiting for your orders.</p>
         </v-card>          </div>
         </div>
               </div>
@@ -76,7 +83,10 @@
           <div class="content-right"  style="border: 0;">
  <v-card  elevation="0">
          <p class="timeline-title">Connect & Do Business</p>
-         <p class="process">Products can be mass produced to meet<br> your requirements. Logistics and<br> warehousing will be handled by the<br> company to improve productivity</p>
+         <p class="process mb-0">Products can be mass produced to meet</p>
+         <p class="process mb-0"> your requirements. Logistics and</p>
+         <p class="process mb-0"> warehousing will be handled by the</p>
+         <p class="process"> company to improve productivity</p>
         </v-card>          </div>
         </div>
               </div>
@@ -176,6 +186,21 @@ export default {
 </script>
 
 <style>
+.buyers-btns{
+ background-color: #ff6433;
+font-family: 'Gotham', sans-serif;
+font-size: 12px;
+width: 120px;
+height: 35px;
+font-style: normal;
+font-weight: 350;
+line-height: 10px;
+letter-spacing: 0em;
+color: #ffffff;
+text-align: center;
+border-radius: 4px;
+
+} 
 @media screen and (max-width: 400px) {
   .v-application--wrap {
   overflow-x: hidden;
@@ -428,7 +453,7 @@ text-align: left;
     max-width: 100%;
     width: auto;
     float: none;
-    margin-left: 50px;
+    margin-left: 40px;
     min-height: 53px;
   }
   .timeline-article .content-left-container {
@@ -552,7 +577,7 @@ text-align: left;
 @media screen and (max-width: 600px) {
   /* Place the timelime to the left */
   .timeline::after {
-  left: 31px;
+  left: 20px;
   }
   /* Full-width containers */
   .containers {

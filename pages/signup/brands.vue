@@ -1,6 +1,6 @@
 <template>
     <v-container>
-                    <v-card class="mx-auto mt-16 mb-12" width="200" elevation="0"><router-link to="./"><v-img src="nile-light.png"></v-img></router-link></v-card>
+                    <v-card class="mx-auto mt-16 mb-12" width="200" elevation="0"><router-link to="./"><v-img src="/nile-light.png"></v-img></router-link></v-card>
       <v-container justify="center">
           <v-row class="" align="center" justify="center">
                     <v-col cols="12" class="create"> <p>CREATE SELLER ACCOUNT</p></v-col>
@@ -23,16 +23,16 @@
               <v-card width="455" class="mx-sm-auto" elevation="0">
                   <v-row>
                       <v-col cols="12">
-             <v-text-field outlined :rules="[rulesBusiness.required]" color="#5b5b5b" label="Business Name"></v-text-field>
+             <v-text-field outlined  :rules="[rulesBusiness.required]" label="Business Name"></v-text-field>
                       </v-col>
                             <v-col cols="12">
-             <v-text-field color="#5b5b5b" outlined label="Phone Number"></v-text-field>
+             <v-text-field  outlined label="Phone Number"></v-text-field>
                       </v-col>
                         <v-col cols="12">
-             <v-text-field outlined color="#5b5b5b" label="Email"></v-text-field>
+             <v-text-field outlined  label="Email"></v-text-field>
                       </v-col>
                       <v-col cols="12">
-            <v-text-field outlined color="#5b5b5b"
+            <v-text-field outlined
               v-model="password"
             :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.min]"
@@ -43,12 +43,12 @@
                @click:append="show1 = !show1"></v-text-field>
                       </v-col>
                       <v-col cols="12">
-            <v-select outlined color="#5b5b5b" label="Country"></v-select>
+            <v-select outlined label="Country"></v-select>
                       </v-col>                   <v-col cols="12">
             <v-btn block color="#ff6433" height="55" dark>create account</v-btn>
                       </v-col>
                                <v-col cols="12">
-            <p class="login-account" >Already have an account? <router-link to="./login" color="black--text"> Login</router-link></p>
+            <p class="login-account" >Already have an account? <router-link to="/login" color="black--text"> Login</router-link></p>
                       </v-col>
                               </v-row>
                        </v-card>
@@ -122,13 +122,15 @@ a {
   color: black;
   text-decoration: none;
 }
-.custom-placeholer-color input::placeholder {
+/* .custom-placeholer-color input::placeholder {
   color: black !important;
 }
 
 .custom-label-color .v-label {
   color: black;
   opacity: 1;
-}
-
+} */
+/* .v-text-field--outlined >>> fieldset {
+  border-color: #ff6433;
+} */
 </style>

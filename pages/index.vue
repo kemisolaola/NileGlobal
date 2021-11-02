@@ -2,33 +2,46 @@
   <v-app >
     <Navbar/>
       <v-container fluid class="headss" >
-        <v-row  class=" contents">
+        <v-row  class="contents">
           <v-col cols="12"  class="header-content" >
-            <div class="header-title"><p >Revolutionizing how brands go global</p></div>
-                          <p class="niles-global mx-auto white--text">Niles Global is the leading Bilateral trade platform for businesses, connecting local brands & entreperneurs with international retailers.</p>
-            <v-container class="text-center pb-16">
-            <v-btn class="" color="#FF6433" to="/buyer"  dark>For buyers</v-btn>
-            <v-btn class="brands-btn" dark outlined color="white" to="brands">For brands</v-btn>
-            </v-container> </v-col>
+            <div class="header-title">
+              <p >Revolutionizing how brands go global</p>
+              </div>
+              <p class="niles-global mx-auto white--text">Niles Global is the leading Bilateral trade platform for businesses, connecting local brands & entreperneurs with international retailers.</p>
+             </v-col>
+             <v-col class="text-center pb-16">
+               <v-row no-gutters justify="center">
+                 <v-col class="mb-2 mb-sm-0" cols="12" sm="3">
+                   <nuxt-link to="/buyer">
+                   <button class="buyers-btns" color="#FF6433" to="/buyer"  dark>FOR BUYERS</button>
+                   </nuxt-link>
+                  </v-col>
+                  <v-col cols="12" sm="3">
+                    <nuxt-link to="/brands">
+                     <button class="brands-btns" dark outlined color="white" to="brands">FOR BRANDS</button>
+                    </nuxt-link>
+                  </v-col>
+                 </v-row>
+            </v-col>
         </v-row>
       </v-container>
          <v-container class="brand mx-auto ">
           <v-row class="brands-row">
-            <v-col  cols="12" sm="6" md="4" lg="4">
+            <v-col cols="12" sm="6" md="4" lg="4" data-aos="fade-up">
               <v-card elevation='5' class="about"   min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="magnifying-glass.png"></v-img>
                 <p class="card-header">We Source</p>
                 <p class="card-text" >We serve as a third party between individuals and companies in goods import and export. We also have boots on the ground to make product sourcing and market sourcing a breeze</p>
               </v-card>
             </v-col>
-            <v-col  cols='12' sm="6" md="4" lg="4">
-              <v-card elevation="5" class="about"   min-height="400">
+            <v-col  cols='12' sm="6" md="4" lg="4" data-aos="fade-up">
+              <v-card  elevation="5" class="about"   min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="brand.png"></v-img>
                 <p class="card-header">We Brand</p>
                 <p class="card-text">Advertise your business or brand with excellent product branding solutions. Think fittings, souvenirs, business apparatus, and more. We brand them all.</p>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4" lg="4">
+            <v-col  data-aos="fade-up"  cols="12" sm="6" md="4" lg="4">
               <v-card elevation="5" class="about"  min-height="400">
                 <v-img class="mx-auto pt-12" contain width="55" src="truck.png"></v-img>
                 <p  class="card-header">We Ship</p>
@@ -37,7 +50,7 @@
             </v-col>
          </v-row>
       </v-container>
-       <v-container fluid class="start">
+       <v-container data-aos="fade-up" fluid class="start">
          <v-row align="center" class="pt-14" justify="center">
           <v-col class="text-center" cols="12">
             <h3> START YOUR GLOBAL JOURNEY TODAY</h3>
@@ -84,34 +97,34 @@
   </v-container>
    <v-container fluid class="services">
     <v-row align="center">
-      <v-col cols="12">
+      <v-col data-aos="fade-up" cols="12">
         <h1 class="">Our Services</h1>
       </v-col>
     </v-row>
     <v-container fluid>
     <v-row align="center" class="services-row mt-12  "  justify="center"  >
-      <v-col cols="12" sm="6" md="3">
+      <v-col data-aos="fade-up" cols="12" sm="6" md="3">
         <v-card elevation="5" to="./imports" class="services-card"  height="350">
           <div class=""><v-img contain height="42" width="67" class="mx-auto" src="trucker.png"></v-img></div>
           <p class="service-title mt-7">Import</p>
           <p class="services-text  mt-4">Tired of expensive and poorly branded items. You can also import quality branded items, machineries & sourvenirs for your events, business or occassions.</p>
         </v-card>
         </v-col>
-      <v-col cols="12" sm="6" md="3">
+      <v-col data-aos="fade-up" cols="12" sm="6" md="3">
         <v-card elevation="5" to="./exports"  class="services-card"  height="350">
           <div ><v-img contain height="44" width="66" class="mx-auto" src="globe.png"></v-img></div>
           <p class="service-title mt-7">Export</p>
           <p class="services-text mt-4">One of our business strategies is exporting the much needed raw materials, agricultural produce and more much in large quantities to China.</p>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="6" md="3" >
+      <v-col data-aos="fade-up" cols="12" sm="6" md="3" >
         <v-card elevation="5"  class="services-card" to="./payment"  height="350">
           <div ><v-img contain height="44"  width="66" class="mx-auto" src="exchange.png"></v-img></div>
           <p class="service-title mt-7">Foreign Exchange</p>
           <p class="services-text mt-4">Experience difficulties paying your foreign associates in foreign currencies. We can pay them on your behalf & you refund us the naira equivalent.</p>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="6" md="3" >
+      <v-col data-aos="fade-up" cols="12" sm="6" md="3" >
         <v-card elevation="5"  class="services-card" to="/business"  height="350">
           <div ><v-img contain height="44"  width="66" class="mx-auto" src="shake.png"></v-img></div>
           <p class="service-title mt-7">Consultation</p>
@@ -123,14 +136,14 @@
   </v-container>
    <v-container fluid class="how-work">
     <v-row align="center"  justify="center">
-      <v-col cols="12">
+      <v-col data-aos="fade-up" cols="12">
         <h1 class="">How It Works</h1>
       </v-col>
     </v-row>
    </v-container>
         <v-container class="benefit">
            <v-row align="center" class="mt-15 ">
-            <v-col class="how-it-works" cols="12" sm="6" md="4">
+            <v-col data-aos="fade-up" class="how-it-works" cols="12" sm="6" md="4">
               <v-card class="how-card text-center" height="470" width="270" elevation="0">
           <v-img  contain max-width="195" height="195" class="mx-auto pt-5" src="consult.png"></v-img>
           <p class="how-title">Image Upload <br> and Consultation</p>
@@ -138,7 +151,7 @@
           <v-btn color="#FF6433"  class="mt-5" dark>Explore now</v-btn>
         </v-card>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col data-aos="fade-up" cols="12" sm="6" md="4">
              <v-card class="how-card text-center" height="470" width="270" elevation="0">
           <v-img contain max-width="195" height="195" class="mx-auto" src="branding.png"></v-img>
          <p class="how-title">Product Sourcing <br>and Branding</p>
@@ -146,7 +159,7 @@
         <v-btn color="#FF6433" dark>explore now</v-btn>
           </v-card>
             </v-col>
-             <v-col cols="12" sm="6" md="4">
+             <v-col data-aos="fade-up" cols="12" sm="6" md="4">
               <v-card class="how-card text-center" height="470" width="270" elevation="0">
          <v-img  contain max-width="195" height="195" class="mx-auto" src="delivery.png"></v-img>
           <p class="how-title">Product Delivery</p>
@@ -159,7 +172,7 @@
               </v-container>
      <v-container  class="complicated">
       <v-row class="missions-row">
-         <v-col class="missions" cols="12" sm="6" md="4">
+         <v-col data-aos="fade-up" class="missions" cols="12" sm="6" md="4">
           <v-card  class="mission-card " height= '385'>
             <p class="mission">Our mission is to create a sustainable bridge between consumer goods and employment opportunities across all sectors, thereby making Africa a global marketplace.</p>
           </v-card>
@@ -167,7 +180,7 @@
             <p class="goal">“Our goal is to help brands grow on a global scale and meet the needs of the end users.” </p>
           </v-card>
         </v-col>
-         <v-col class="ratings" cols="12" sm="6" md="4">
+         <v-col data-aos="fade-up" class="ratings" cols="12" sm="6" md="4">
           <v-card class="ratings-card" width="208" height="209">
              <p class="rates">4.9/5.0</p>
      <v-rating class="stars" v-model="rating" color="#ffd308" dense value="5" size="16"
@@ -182,7 +195,7 @@
 </p>
              </v-card>
         </v-col>
-        <v-col class="brand-cols" cols="12" sm="12" md="3">
+        <v-col data-aos="fade-up" class="brand-cols" cols="12" sm="12" md="3">
           <v-card elevation="0" class="brands-card" width="373" max-height="480">
             <p class="brands-title">BRANDS COMPETITIVE EDGE</p>
          <p class="brands-head"> Build Your Brand</p>
@@ -194,7 +207,7 @@
     </v-container>
       <v-container fluid class="mt-10">
     <v-row align="center" class="pt-14" justify="center">
-      <v-col class="text-center mb-5" cols="12">
+      <v-col data-aos="fade-up" class="text-center mb-5" cols="12">
         <p class="testimony">GREAT WORDS ABOUT NILE GLOBAL</p>
         <h1>What make them love us?</h1>
       </v-col>
@@ -214,7 +227,7 @@
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
   </v-container>
-     <v-container fluid>
+     <v-container data-aos="fade-up" fluid>
     <v-row align="center" class="pt-14 px-16" justify="center">
       <v-col cols="2" >
         <v-img width="60" src="stylu.png"></v-img>
@@ -231,7 +244,7 @@
   </v-container>
      <v-container fluid>
     <v-row align="center" class="pt-14" justify="center">
-      <v-col class="text-center" cols="6">
+      <v-col data-aos="fade-up" class="text-center" cols="6">
         <p class="text-h6 text-center font-weight-bold">Discover some available products</p>
       </v-col>
     </v-row>
@@ -480,8 +493,46 @@ export default {
   background-image: url('../assets/containers.png');
   background-size: contain;
 }
+.buyers-btns{
+ background-color: #ff6433;
+font-family: 'Gotham', sans-serif;
+font-size: 8px;
+width: 100px;
+height: 35px;
+font-style: normal;
+font-weight: 350;
+line-height: 10px;
+letter-spacing: 0em;
+color: #ffffff;
+text-align: center;
+border-radius: 4px;
 
+}
+.brands-btns{
+font-family: 'Gotham', sans-serif;
+font-size: 8px;
+width: 100px;
+height: 35px;
+font-style: normal;
+font-weight: 350;
+line-height: 10px;
+letter-spacing: 0em;
+color: #ffffff;
+text-align: center;
+border-radius: 4px;
+border: 1px solid #ffffff;
+}
 @media screen and (max-width: 359px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .testimonies {
   position: relative;
   padding-left: 36px;
@@ -586,6 +637,16 @@ color: #5B5B5B;
 }
    }
    @media screen and (min-width: 361px) {
+     .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
  .brands-row{
   margin-left: auto;
   margin-right: auto;
@@ -658,6 +719,16 @@ color: #5B5B5B;
 }
 }
  @media screen and (min-width: 421px) and (max-width: 541px) {
+   .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
      .brands-row{
   margin-left: 45px;
   margin-right: 45px;
@@ -735,11 +806,31 @@ color: #5B5B5B;
 }
    }
    @media screen and (max-width: 600px){
+     .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
 .process-cont{
   margin-left:25%;
 }
 }
 @media screen and (max-width: 620px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 35px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .headss{
   background-image: url('../assets/containers.png');
   background-size: 100% 100%;
@@ -793,6 +884,16 @@ text-align: center;
 }
 }
 @media screen and (max-width: 800px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
 .header-button {
   padding-left: 180px;
 }
@@ -801,6 +902,16 @@ text-align: center;
 }
 }
 @media screen and (max-width: 959px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .how-title {
   font-family: 'Gotham', sans-serif;
 font-size: 25px;
@@ -813,6 +924,16 @@ color: #5B5B5B;
 }
 }
 @media screen and (min-width: 360px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 25x;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .testimonies {
   position: relative;
   padding-left: 56px;
@@ -845,6 +966,16 @@ color: #C4C4C4;
 }
 }
   @media screen and (min-width: 600px) {
+    .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
       .logistics {
   width: 252.6px;
   height: 385px;
@@ -898,6 +1029,16 @@ color: #5B5B5B;
 }
    }
 @media screen and (min-width: 621px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .header-title {
     font-family: 'Gotham', sans-serif;
     font-size: 40px;
@@ -953,6 +1094,16 @@ text-align: center;
 }
 }
  @media screen and (min-width: 650px) {
+   .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
       .logistics {
   width: 252.6px;
   height: 385px;
@@ -1006,6 +1157,16 @@ color: #5B5B5B;
 }
    }
    @media screen and (min-width: 691px) {
+     .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 35px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
 .testimonial-text{
   font-family: 'Gotham-light', sans-serif;
 font-size: 11px;
@@ -1033,6 +1194,16 @@ color: #C4C4C4;
 }
 }
 @media screen and (min-width: 768px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .brands-btn {
     margin-left: 20px;
     margin-top: 0;
@@ -1069,6 +1240,16 @@ color: #C4C4C4;
 }
 }
  @media screen and (min-width: 806px) {
+   .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
      .header-title {
     font-family: 'Gotham', sans-serif;
     font-size: 50px;
@@ -1080,6 +1261,16 @@ color: #C4C4C4;
 
    }
 @media screen and (min-width: 960px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 35px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .headss{
   background-image: url('../assets/containers.png');
   background-size: 100% 100%;
@@ -1131,8 +1322,29 @@ text-align: center;
 .brands-card {
   padding-top: 75px;
 }
+
+  .how-title {
+  font-family: 'Gotham', sans-serif;
+font-size: 22px;
+font-style: normal;
+font-weight: 350;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+}
 }
 @media screen and (min-width: 1011px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
     .about {
   text-align: center;
   padding-left: 35px;
@@ -1142,6 +1354,16 @@ text-align: center;
   }
 }
   @media screen and (min-width: 1264px) {
+    .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
     .headss{
   background-image: url('../assets/containers.png');
   background-size: 100% 100%;
@@ -1193,6 +1415,16 @@ text-align: center;
 }
 }
 @media screen and (min-width: 1024px) {
+  .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
+font-style: normal;
+font-weight: 350;
+letter-spacing: 0em;
+text-align: center;
+color: #5B5B5B;
+
+}
   .testimonies {
   position: relative;
   padding-left: 56px;
@@ -1601,19 +1833,17 @@ margin-bottom: 2px;
 v-btn{
   font-family: 'Gotham', sans-serif;
 }
-@media screen and (min-width: 960px) {
-  .how-title {
-  font-family: 'Gotham', sans-serif;
-font-size: 22px;
+@media screen and (min-width: 1264px) {
+    .discover {
+ font-family: 'Gotham', sans-serif;
+font-size: 39px;
 font-style: normal;
 font-weight: 350;
-line-height: 31px;
 letter-spacing: 0em;
 text-align: center;
 color: #5B5B5B;
+
 }
-}
-@media screen and (min-width: 1264px) {
   .how-title {
   font-family: 'Gotham', sans-serif;
 font-size: 25px;

@@ -1,10 +1,11 @@
 <template>
 <v-app>
     <v-container >
-           <v-card class="mx-auto mt-16 mb-12" width="200" elevation="0"><router-link to="./"><v-img src="nile-light.png"></v-img></router-link></v-card>
-                   <v-card class="mx-auto my-auto" width="455" elevation="0">
-                          <v-row>
-                            <v-col cols="12" class="title text-center"> <p>CREATE SELLER ACCOUNT</p></v-col>
+           <v-card class="mx-auto mt-16 mb-12" width="200" elevation="0"><router-link to="./"><v-img src="/nile-light.png"></v-img></router-link></v-card>
+            <v-row justify="center">
+              <v-col cols="12" sm="7" md="6" lg="5">
+               <v-row>
+                            <v-col cols="12" class="title text-center"> <p class="create-seller">CREATE SELLER ACCOUNT</p></v-col>
                                <v-col cols="12">
              <v-text-field outlined placeholder="Email"></v-text-field>
                       </v-col>
@@ -12,13 +13,14 @@
             <v-text-field outlined placeholder="Password"></v-text-field>
                       </v-col>
                                              <v-col cols="12">
-            <v-btn block color="#ff6433" height="55" dark>sign up</v-btn>
+            <v-btn block color="#ff6433" height="55" dark style="font-family: 'Gotham', san-serif;">sign up</v-btn>
                       </v-col>
                                <v-col cols="12">
-            <p class="login-account" >Already have an account? <router-link to="./login" color="black--text"> Login</router-link></p>
+            <p class="login-account" >Already have an account? <router-link to="/login" color="black--text"> Login</router-link></p>
                       </v-col>
                       </v-row>
-                              </v-card>
+              </v-col>
+            </v-row>
                                    </v-container>
                                    </v-app>
 </template>
@@ -30,6 +32,9 @@ export default {
 </script>
 
 <style scoped>
+.create-seller{
+  font-family: 'Gotham', sans-serif;
+}
 .login-account{
 font-family:' Gotham', sans-serif;
 font-size: 15px;
@@ -62,14 +67,14 @@ letter-spacing: 0em;
 text-align: center;
 color: #5B5B5B;
 }
-.custom-placeholer-color input::placeholder {
-  color: red!important;
+/* .custom-placeholer-color input::placeholder {
+  color: #ff6433 !important;
   opacity: 1;
 }
 
 .custom-label-color .v-label {
-  color: red;
+  color: #ff6433;
   opacity: 1;
-}
+} */
 
 </style>

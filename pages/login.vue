@@ -2,23 +2,25 @@
     <v-app>
        <v-container>
               <v-card class="mx-auto mt-16 mb-12" width="200" elevation="0"><router-link to="./"><v-img src="nile-light.png"></v-img></router-link></v-card>
-                  <v-card class="mx-auto my-auto" width="455" elevation="0">
-                          <v-row>
-                            <v-col cols="12" class="title text-center"> <p>LOGIN</p></v-col>
-                              <v-col cols="12">
-                              <v-text-field outlined placeholder="Email"></v-text-field>
-                              </v-col>
-                              <v-col cols="12">
-                                <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                                  :rules="[rules.required, rules.min]"
-                                  :type="show1 ? 'text' : 'password'"
-                                  name="input-10-1"
-                                  hint="At least 8 characters"
-                                  label="Password"
-                                  @click:append="show1 = !show1"
-                                  outlined placeholder="Password"></v-text-field>
-                              </v-col>
-                              <v-col cols="12">
+                  <v-row justify="center">
+              <v-col cols="12" sm="7" md="6" lg="5">
+               <v-row>
+                            <v-col cols="12" class="title text-center"> <p class="create-seller">LOGIN</p></v-col>
+                               <v-col cols="12">
+                               <v-text-field outlined placeholder="Email"></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+            <v-text-field :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                                                      :rules="[rules.required, rules.min]"
+                                                      :type="show1 ? 'text' : 'password'"
+                                                      name="input-10-1"
+                                                      hint="At least 8 characters"
+                                                      label="Password"
+                                                      @click:append="show1 = !show1"
+                                                      outlined placeholder="Password"></v-text-field>
+                      </v-col>
+                                             <v-col cols="12">
+                                               <v-col cols="12">
                               <v-row>
                                  <v-col class="pt-0">
                                    <v-checkbox class="pt-0" label="Remember Me"></v-checkbox>
@@ -28,18 +30,18 @@
                                   </v-col>
                               </v-row>
                               </v-col>
-                              <v-col cols="12">
-                                <v-btn block color="#ff6433" height="55" dark>login</v-btn>
-                              </v-col>
-                              <v-col cols="12">
+            <v-btn block color="#ff6433" height="55" dark style="font-family: 'Gotham', san-serif;">LOGIN</v-btn>
+                      </v-col>
+                      <v-col cols="12">
                                 <v-row> <v-col>
                                   <p class="links"><router-link to=""> Buyer Account</router-link></p>
                                 </v-col>
                                 <v-col><p class="links-right" ><router-link to=""> Seller Account</router-link></p></v-col>
                                 </v-row>
                               </v-col>
-                                      </v-row>
-                              </v-card>
+                      </v-row>
+              </v-col>
+            </v-row>
        </v-container>
               </v-app>
 </template>
